@@ -1,0 +1,59 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,700,400italic);
+
+.textWrap {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  position: relative;
+}
+
+.textWrap .container {
+  background: #fff;
+  max-width: 850px;
+  padding: 80px 20px 80px 20px;
+}
+
+.page-header {
+  border: none;
+  margin: 0;
+  padding-bottom: 9px;
+}
+
+.textWrap h1 {
+  font-family: 'Libre Baskerville', 'Times New Roman', serif;
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+
+.servicesPiece .singleService {
+  background: url(../images/services-border.png) repeat-x top;
+  margin: 0 1%;
+  padding: 25px 0 10px 0;
+}
+
+.servicesPiece .singleService:last-child {
+  background: url(../images/services-border.png) repeat-x top, url(http://etchsalon.com/media/services-border.png) repeat-x bottom;
+  padding-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
