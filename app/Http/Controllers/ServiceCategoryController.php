@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Debugbar;
 use App\ServiceCategory;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -36,6 +38,7 @@ class ServiceCategoryController extends Controller
         $service = ServiceCategory::create($request->all());
 
         if ($service) {
+            alert()->success('Successfully created');
             return redirect(route('services.index', ['id' => $service->id]))->with('message', 'Successfully created');
         }
 
@@ -66,12 +69,17 @@ class ServiceCategoryController extends Controller
      */
     public function update(Request $request, ServiceCategory $category)
     {
+        
         if($request->has('name')){
             $category->update($request->all());
+            alert()->success('Successfully updated');
+
             return redirect('services')->with('message', 'Successfully updated');
         }
 
         if ($status = $category->approve()){
+            alert()->success('message', $category->name . ' is ' . $status);
+
             return redirect('services')->with('message', 'Category is ' . $status);
         }
 

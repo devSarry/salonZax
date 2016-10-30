@@ -15,7 +15,6 @@
     <!-- Bootstrap Core CSS -->
     <link href="{{url('css/admin.css')}}" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -35,7 +34,7 @@
 
 @include('admin.layout._navbar')
 
-<div class="container-fluid" id="app">
+<div class="container-fluid" id="app" >
     <div class="row">
 
         @include('admin.layout._sidebar')
@@ -53,6 +52,15 @@
 <!-- Bootstrap Core JavaScript -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="{{url('js/app.js')}}"></script>
+
+<script>
+</script>
+
+@include('admin.layout.footer')
+
+<!-- Include this after the sweet alert js file -->
+
+@include('sweet::alert')
 
 @yield('scripts')
 

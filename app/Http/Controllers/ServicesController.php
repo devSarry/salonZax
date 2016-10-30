@@ -59,6 +59,7 @@ class ServicesController extends Controller
         $service = Service::create($request->all());
 
         if ($service) {
+            alert()->success('Successfully Added New Service');
             return redirect(route('services.index', ['id' => $service->id]))->with('message', 'Successfully created');
         }
 
@@ -91,6 +92,7 @@ class ServicesController extends Controller
         $service = Service::find($id);
 
         if ($service->update($request->all())) {
+            alert()->success('Successfully Updated Service');
             return redirect('services')->with('message', 'Successfully updated');
         }
 
@@ -106,6 +108,8 @@ class ServicesController extends Controller
     public function destroy($id)
     {
         if ( Service::destroy($id)) {
+            alert()->success('Successfully Deleted');
+
             return redirect(route('services.index'))->with('message', 'Successfully deleted');
         }
 

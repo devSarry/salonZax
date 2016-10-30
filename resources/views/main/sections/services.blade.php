@@ -1,5 +1,5 @@
 <!-- Two -->
-<section id="two" class="wrapper alt style2">
+<section id="one" class="wrapper alt style2">
     <section class="spotlight">
         <div class="image"><img src="images/services.jpg" alt=""/></div>
         <div class="content">

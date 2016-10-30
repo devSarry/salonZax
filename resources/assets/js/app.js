@@ -6,7 +6,9 @@
  */
 
 require('./bootstrap');
+require('sweetalert');
 require('vuikit');
+require('./htm5-spectral/main');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,7 +17,9 @@ require('vuikit');
  */
 
 Vue.component('my-checkbox', require('./components/Example.vue'));
+Vue.component('hero', require('./components/Hero.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {Hero}
 });

@@ -30,7 +30,7 @@
                                name="approved"
                                id="fancy-checkbox-default"
                                autocomplete="off"
-                               value="{{old('approved')}}"/>
+                               checked="{{ old('approved') ? 'checked' : '' }}"/>
                         <div class="btn-group ">
                             <label for="fancy-checkbox-default" class="btn btn-default">
                                 <span class="fa fa-check"></span>

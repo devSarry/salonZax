@@ -14,7 +14,7 @@
     </div>
 </template>
 
-<script lang="es6">
+<script>
     export default {
         mounted() {
             console.log('Component ready.')

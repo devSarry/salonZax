@@ -6,7 +6,8 @@
  */
 
 require('jquery.scrollex');
-require('./scrolly.min');
+require('./jquery.scrollex.min');
+require('./jquery.scrolly.min');
 require('./skel.min');
 require('./util');
 

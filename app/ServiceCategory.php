@@ -19,7 +19,7 @@ class ServiceCategory extends Model
         if($this->approved){
             $this->update(['approved' => false]);
 
-            return 'deactive';
+            return 'deactivated';
         }
 
         $this->update(['approved' => true]);

@@ -18,8 +18,11 @@
                 <div class="col-md-6">
                     <div class="row">
 
-                        <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">{{ $category->name }}</h1>
-                        <span class="dropdown pull-right raw-margin-top-24 raw-margin-right-8">
+                        <div class="col-md-6">
+                            <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">{{ $category->name }}</h1>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="dropdown pull-right raw-margin-top-24 raw-margin-right-8">
                                 <a href="#" class="dropdown dropdown-toggle btn btn-primary "
                                    id="drop3"
                                    data-toggle="dropdown"
@@ -30,16 +33,23 @@
                                 </a>
                                 <ul class="dropdown-menu " aria-labelledby="drop3">
                                     <li>
+                                        <span>
+                                            <a href="{{ route('category.edit', ['id' => $category->id]) }}"
+                                               class="btn btn-info btn-block">
+                                                <i class="fa fa-pencil"></i> Edit
+                                            </a>
+                                        </span>
+                                    </li>
+
+                                    <li>
                                         <form method="post"
                                               action="{!! route('category.update', [$category->id]) !!}">
                                                         {!! csrf_field() !!}
-                                                        {!! method_field('PATCH') !!}
-                                            <div class="btn-group btn-block ">
-                                                <button tyep="submit" class="btn btn-default">
+                                            {!! method_field('PATCH') !!}
+                                            <div >
+                                                <button type="submit" class="btn btn-default btn-block">
                                                     <span class="fa {{ $category->approved ? 'fa-check-square-o' : 'fa-square-o' }}">
                                                     </span>
-                                                </button>
-                                                <button type="submit" class="btn btn-default active">
                                                     Show?
                                                 </button>
                                             </div>
@@ -61,8 +71,9 @@
                                     </form>
                                 </ul>
                         </span>
-                        <a class="btn btn-primary pull-right raw-margin-top-24 raw-margin-right-8"
-                           href="{!! route('services.create', ['category_id' => $category->id]) !!}">Add New Service</a>
+                            <a class="btn btn-primary pull-right raw-margin-top-24 raw-margin-right-8"
+                               href="{!! route('services.create', ['category_id' => $category->id]) !!}">Add New Service</a>
+                        </div>
                     </div>
 
                     <div class="row">
