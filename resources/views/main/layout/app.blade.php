@@ -32,19 +32,7 @@
 
     <!-- Three -->
 
-    <!-- CTA -->
-    <section id="cta" class="wrapper style4">
-        <div class="inner">
-            <header>
-                <h2>Arcue ut vel commodo</h2>
-                <p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-            </header>
-            <ul class="actions vertical">
-                <li><a href="#" class="button fit special">Activate</a></li>
-                <li><a href="#" class="button fit">Learn More</a></li>
-            </ul>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer id="footer">
@@ -56,7 +44,7 @@
             <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
         </ul>
         <ul class="copyright">
-            <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Sarry</li><li>Design: <a href="http://makkaraperuna.com">Salon Demo</a></li>
         </ul>
     </footer>
 
