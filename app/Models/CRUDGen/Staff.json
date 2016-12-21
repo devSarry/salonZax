@@ -1,0 +1,23 @@
+/*
+  php artisan crud:generate Staff --fields_from_file="app/Models/CRUDGen/Staff.json" --view-path=admin
+*/
+
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "body",
+      "type": "text"
+    },
+    {
+      "name": "hasImage"
+    }
+  ]
+}

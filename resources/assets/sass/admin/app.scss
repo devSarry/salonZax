@@ -5,9 +5,6 @@
 @import "bootsnipp";
 @import "sweetalert.css";
 @import "node_modules/sweetalert/themes/twitter/twitter.css";
-
-
-
 /*base*/
 @import "./mixins";
 
@@ -23,7 +20,6 @@ body {
 img {
   width: 100%;
 }
-
 
 /*
  * Global add-ons
@@ -50,6 +46,7 @@ img {
 .sidebar {
   display: none;
 }
+
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
@@ -72,15 +69,38 @@ img {
   margin-bottom: 20px;
   margin-left: -20px;
 }
+
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
 }
+
+.settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav > li > a {
+  padding: 12px 15px;
+}
+
+/*TODO
+  Trigger hover effect when hovered over button
+*/
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #fff;
   background-color: #428bca;
+}
+
+.nav-sidebar > li > .settings > .btn {
+  border-radius: 0px;
+  border: 2px;
+  margin-top: 2px;
+  margin-right: 2px;
+
 }
 
 
@@ -91,16 +111,17 @@ img {
 .main {
   padding: 20px;
 }
+
 @media (min-width: 768px) {
   .main {
     padding-right: 40px;
     padding-left: 40px;
   }
 }
+
 .main .page-header {
   margin-top: 20px;
 }
-
 
 /*
  * Placeholder dashboard ideas
@@ -110,12 +131,15 @@ img {
   margin-bottom: 30px;
   text-align: center;
 }
+
 .placeholders h4 {
   margin-bottom: 0;
 }
+
 .placeholder {
   margin-bottom: 20px;
 }
+
 .placeholder img {
   display: inline-block;
   border-radius: 50%;

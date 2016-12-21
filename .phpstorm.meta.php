@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2016-10-30.
+    * Generated on 2016-12-20.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -41,6 +41,8 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
+            'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
+            'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,
@@ -158,6 +160,8 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
+            'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
+            'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,
@@ -275,6 +279,8 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
+            'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
+            'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,
@@ -392,6 +398,8 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
+            'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
+            'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,

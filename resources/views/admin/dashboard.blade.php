@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="page-header">Dashboard</h1>
     <hr>
-    <div class="row">
+    <div class="row" id="app">
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel panel-heading">
@@ -21,6 +21,9 @@
                     <br><br>
                 </div>
             </div>
+
+
         </div>
     </div>
+
 @stop

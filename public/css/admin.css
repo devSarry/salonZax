@@ -6105,11 +6105,28 @@ img {
   padding-right: 20px;
   padding-left: 20px; }
 
+.settings {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.nav > li > a {
+  padding: 12px 15px; }
+
+/*TODO
+  Trigger hover effect when hovered over button
+*/
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #fff;
   background-color: #428bca; }
+
+.nav-sidebar > li > .settings > .btn {
+  border-radius: 0px;
+  border: 2px;
+  margin-top: 2px;
+  margin-right: 2px; }
 
 /*
  * Main content

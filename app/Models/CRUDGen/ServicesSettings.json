@@ -1,0 +1,7 @@
+/*
+  php artisan crud:generate Staff --fields_from_file="app/Models/CRUDGen/ServicesSettings.json" --view-path=admin
+
+  php artisan crud:controller ServiceSettingsController --model-name=ServiceSection --view-path="admin.services.settings"
+
+*/
+

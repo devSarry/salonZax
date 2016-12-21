@@ -9,26 +9,24 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <form action="{!! route('services.update', ['id' => $service->id]) !!}" method="post" role="form">
+                {{ method_field('PATCH') }}
+                {{ csrf_field() }}
+                <div class="form-group col-md-8">
+                    <label for="service">Service</label>
+                    <input type="text" class="form-control" name="service" id="service"
+                           value="{{ $service->service  }}">
+                </div>
+                <div class="form-group col-md-offset-2 col-md-2">
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" name="price" id="price" value="{{ $service->price }}">
+                </div>
 
-                <form action="{!! route('services.update', ['id' => $service->id]) !!}" method="post" role="form">
-                    {{ method_field('PATCH') }}
-                    {{ csrf_field() }}
-                    <div class="form-group col-md-8">
-                        <label for="service">Service</label>
-                        <input type="text" class="form-control" name="service" id="service"
-                               value="{{ $service->service  }}">
-                    </div>
-                    <div class="form-group col-md-offset-2 col-md-2">
-                        <label for="price">Price</label>
-                        <input type="text" class="form-control" name="price" id="price" value="{{ $service->price }}">
-                    </div>
-
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-
-            </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="margin-left: 15px">Submit
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 

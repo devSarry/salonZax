@@ -26,6 +26,8 @@ class ServiceTableSeeder extends Seeder {
         $eloService = $this->populateServices($services);
         $category->services()->saveMany($eloService);
 
+        $this->populateServiceSection();
+
     }
 
     /**
@@ -48,5 +50,15 @@ class ServiceTableSeeder extends Seeder {
         }
 
         return $eloService;
+    }
+
+    private function populateServiceSection(){
+        if (! (\App\ServiceSection::first())){
+            $section = \App\ServiceSection::create();
+            $section->section()->create([
+                'title' => 'Change Me',
+                'body'  => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aut delectus dolorum eius enim explicabo hic illum non quam quasi ratione saepe sapiente similique tenetur veniam vitae, voluptas! Omnis?'
+            ]);
+        }
     }
 }

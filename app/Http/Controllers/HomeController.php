@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Service;
 use App\ServiceCategory;
+use App\ServiceSection;
 use DebugBar\DebugBar;
 use Illuminate\Http\Request;
 
@@ -13,13 +15,15 @@ class HomeController extends Controller
 
     public function index()
     {
+
+        $service_section = ServiceSection::first();
+
         $categories = ServiceCategory::with('services')->get();
 
-        $numberOfCategories = $categories->count();
 
         $chunks = $categories->split(2);
 
 
-        return view('main.index', compact('categories', 'chunks'));
+        return view('main.index', compact('categories', 'chunks', 'service_section'));
     }
 }

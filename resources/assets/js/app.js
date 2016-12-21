@@ -7,19 +7,25 @@
 
 require('./bootstrap');
 require('sweetalert');
-require('vuikit');
-require('./htm5-spectral/main');
-
+//require('vuikit');
+//require('./htm5-spectral/main');
+import { dropdown }  from 'vue-strap'
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the body of the page. From here, you may begin adding components to
  * the application, or feel free to tweak this setup for your needs.
  */
 
-Vue.component('my-checkbox', require('./components/Example.vue'));
+
+
+
+Vue.component('example', require('./components/Example.vue'));
 Vue.component('hero', require('./components/Hero.vue'));
+//Vue.component('alert', require('vue-strap'));
 
 const app = new Vue({
     el: '#app',
-    components: {Hero}
+    components: {
+        dropdown
+    }
 });

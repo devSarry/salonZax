@@ -3,9 +3,8 @@
     <section class="spotlight">
         <div class="image"><img src="images/services.jpg" alt=""/></div>
         <div class="content">
-            <h2>Services</h2>
-            <p>We offer a wide range of services. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi
-                ligula.</p>
+            <h2>{{ $service_section->section[0]->title }}</h2>
+            <p>{{ $service_section->section[0]->body }}</p>
 
             <div class="table-wrapper">
 
