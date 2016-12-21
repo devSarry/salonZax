@@ -174,6 +174,7 @@ return [
         Spatie\Analytics\AnalyticsServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        AnkitPokhrel\LaravelImage\ImageUploadServiceProvider::class,
 
 
         /*

@@ -12,7 +12,8 @@
         "laracasts/utilities": "~2.0",
         "uxweb/sweet-alert": "^1.3",
         "spatie/laravel-analytics": "^2.3",
-        "laravelcollective/html": "^5.3"
+        "laravelcollective/html": "^5.3",
+        "ankitpokhrel/laravel-image": "^0.0.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

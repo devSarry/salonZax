@@ -16,7 +16,7 @@
                            name="title"
                            id="service"
                            required
-                           value="{{ old('service') ? : $service->section[0]->title }}"
+                           value="{{ old('service') ? : $service->section->title }}"
                     >
 
                     {!! $errors->first('service', '<span class="help-block">:message</span>') !!}
@@ -29,7 +29,7 @@
                               id="body"
                               rows="5"
                               required
-                    >{{ old('body') ? : $service->section[0]->body }}</textarea>
+                    >{{ old('body') ? : $service->section->body }}</textarea>
 
                     {!! $errors->first('service', '<span class="help-block">:message</span>') !!}
                 </div>

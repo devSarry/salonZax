@@ -3,8 +3,8 @@
     <section class="spotlight">
         <div class="image"><img src="images/services.jpg" alt=""/></div>
         <div class="content">
-            <h2>{{ $service_section->section[0]->title }}</h2>
-            <p>{{ $service_section->section[0]->body }}</p>
+            <h2>{{ $service_section->section->title }}</h2>
+            <p>{{ $service_section->section->body }}</p>
 
             <div class="table-wrapper">
 

@@ -17,6 +17,7 @@
     "vue-strap": "github:wffranco/vue-strap.git"
   },
   "dependencies": {
+    "dropzone": "^4.3.0",
     "font-awesome": "^4.6.3",
     "jquery.scrollex": "^0.2.1",
     "jquery.scrolly": "0.0.1",
