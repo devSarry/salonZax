@@ -5,12 +5,12 @@
 @import "bootsnipp";
 @import "sweetalert.css";
 @import "node_modules/sweetalert/themes/twitter/twitter.css";
+
 /*base*/
 @import "./mixins";
 
-/*
- * Base structure
- */
+/* components */
+@import "../components/dropzone";
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {

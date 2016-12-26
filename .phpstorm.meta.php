@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2016-12-21.
+    * Generated on 2016-12-25.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -43,8 +43,7 @@ namespace PHPSTORM_META {
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
             'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
             'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
-            'AnkitPokhrel\LaravelImage\ImageUploadService' instanceof \AnkitPokhrel\LaravelImage\ImageUploadService,
-            'laravelImage' instanceof \AnkitPokhrel\LaravelImage\ImageHelper,
+            'image' instanceof \Intervention\Image\ImageManager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,
@@ -166,8 +165,7 @@ namespace PHPSTORM_META {
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
             'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
             'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
-            'AnkitPokhrel\LaravelImage\ImageUploadService' instanceof \AnkitPokhrel\LaravelImage\ImageUploadService,
-            'laravelImage' instanceof \AnkitPokhrel\LaravelImage\ImageHelper,
+            'image' instanceof \Intervention\Image\ImageManager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,
@@ -289,8 +287,7 @@ namespace PHPSTORM_META {
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
             'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
             'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
-            'AnkitPokhrel\LaravelImage\ImageUploadService' instanceof \AnkitPokhrel\LaravelImage\ImageUploadService,
-            'laravelImage' instanceof \AnkitPokhrel\LaravelImage\ImageHelper,
+            'image' instanceof \Intervention\Image\ImageManager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,
@@ -412,8 +409,7 @@ namespace PHPSTORM_META {
             'JavaScript' instanceof \Laracasts\Utilities\JavaScript\PHPToJavaScriptTransformer,
             'UxWeb\SweetAlert\SessionStore' instanceof \UxWeb\SweetAlert\LaravelSessionStore,
             'uxweb.sweet-alert' instanceof \UxWeb\SweetAlert\SweetAlertNotifier,
-            'AnkitPokhrel\LaravelImage\ImageUploadService' instanceof \AnkitPokhrel\LaravelImage\ImageUploadService,
-            'laravelImage' instanceof \AnkitPokhrel\LaravelImage\ImageHelper,
+            'image' instanceof \Intervention\Image\ImageManager,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\LogBroadcaster,

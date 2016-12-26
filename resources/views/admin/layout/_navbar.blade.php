@@ -9,16 +9,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{url('/')}}">{{ config('app.name', 'Laravel') }}</a>
+            <a class="navbar-brand" href="{{url('/dashboard')}}">{{ config('app.name', 'Laravel') }}</a>
         </div>
 
         <div class="navbar-collapse collapse" id="bs-navbar-collapse-1" aria-expanded="false">
             <ul class="nav navbar-nav navbar-right">
-                <li class="{{ classActivePath('/setting') }}"><a href="{{url('/settings')}}">Settings</a></li>
                 <li>
                     <a href="{{ url('/logout') }}"
-                       onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
                     </a>
 

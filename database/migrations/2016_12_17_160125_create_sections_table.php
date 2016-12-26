@@ -18,6 +18,7 @@ class CreateSectionsTable extends Migration
 
             $table->string('title');
             $table->text('body');
+            $table->string('color');
 
             $table->integer('sectionable_id');
             $table->string('sectionable_type');

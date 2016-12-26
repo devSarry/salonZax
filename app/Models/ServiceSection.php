@@ -8,5 +8,4 @@ class ServiceSection extends Model
 {
     use Sectionable;
 
-
 }

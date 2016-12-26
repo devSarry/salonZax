@@ -174,8 +174,8 @@ return [
         Spatie\Analytics\AnalyticsServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         AnkitPokhrel\LaravelImage\ImageUploadServiceProvider::class,
-
 
         /*
          * Application Service Providers...
@@ -239,6 +239,8 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class
+
     ],
 
 ];

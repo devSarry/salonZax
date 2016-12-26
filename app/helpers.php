@@ -35,6 +35,13 @@ if (!function_exists('classActivePath')) {
     }
 }
 
+if (!function_exists('classActiveButton')) {
+    function classActiveButton($formColor, $storedColor)
+    {
+        return $formColor == $storedColor ? 'active' : '';
+    }
+}
+
 if (!function_exists('classActiveSegment')) {
     function classActiveSegment($segment, $value)
     {
@@ -136,6 +143,13 @@ if (!function_exists('parseArticle')) {
         }
 
         return $inputs;
+    }
+
+
+    if (!function_exists('is_param')) {
+        function is_param($param){
+            return $param ? $param : null;
+        }
     }
 }
 

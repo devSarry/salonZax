@@ -18,4 +18,5 @@ elixir(mix => {
         .sass('admin/login.scss', 'public/css/login.css')
         .sass('admin/app.scss', 'public/css/admin.css')
        .webpack('app.js');
+    mix.copy('/node_modules/bootstrap-sass/assets/fonts/', 'public/fonts/');
 });

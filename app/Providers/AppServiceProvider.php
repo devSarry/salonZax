@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Validator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,28 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
+        /*Custom validator rule for checking base64 images file type.
+        value must be and intervention image object.
+        */
+        Validator::extend('is_mime',function($attribute, $value, $params, $validator) {
+            try{
+                $mime = $value->mime();
+
+            } catch (\Exception $e){
+                return $e->getMessage();
+            }
+
+            foreach ($params as $param) {
+
+                if ( $mime == 'image/' . $param){
+
+                    return true;
+                }
+            }
+            return false;
+        });
+
     }
 
     /**

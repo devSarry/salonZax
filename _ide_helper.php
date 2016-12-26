@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.21 on 2016-12-21.
+ * Generated for Laravel 5.3.28 on 2016-12-25.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1690,17 +1690,6 @@ namespace {
         /**
          * Determine if the current user is authenticated.
          *
-         * @return \App\User 
-         * @throws \Illuminate\Auth\AuthenticationException
-         * @static 
-         */
-        public static function authenticate(){
-            return \Illuminate\Auth\SessionGuard::authenticate();
-        }
-        
-        /**
-         * Determine if the current user is authenticated.
-         *
          * @return bool 
          * @static 
          */
@@ -1716,6 +1705,17 @@ namespace {
          */
         public static function guest(){
             return \Illuminate\Auth\SessionGuard::guest();
+        }
+        
+        /**
+         * Determine if the current user is authenticated.
+         *
+         * @return \App\User 
+         * @throws \Illuminate\Auth\AuthenticationException
+         * @static 
+         */
+        public static function authenticate(){
+            return \Illuminate\Auth\SessionGuard::authenticate();
         }
         
     }
@@ -2917,12 +2917,13 @@ namespace {
          *
          * @param string $query
          * @param array $bindings
+         * @param bool $useReadPdo
          * @return mixed 
          * @static 
          */
-        public static function selectOne($query, $bindings = array()){
+        public static function selectOne($query, $bindings = array(), $useReadPdo = true){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\SQLiteConnection::selectOne($query, $bindings);
+            return \Illuminate\Database\SQLiteConnection::selectOne($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -2953,8 +2954,12 @@ namespace {
         }
         
         /**
-         * 
+         * Run a select statement against the database and returns a generator.
          *
+         * @param string $query
+         * @param array $bindings
+         * @param bool $useReadPdo
+         * @return \Generator 
          * @static 
          */
         public static function cursor($query, $bindings = array(), $useReadPdo = true){
@@ -5524,6 +5529,18 @@ namespace {
         }
         
         /**
+         * Get or set UNIX mode of a file or directory.
+         *
+         * @param string $path
+         * @param int $mode
+         * @return mixed 
+         * @static 
+         */
+        public static function chmod($path, $mode = null){
+            return \Illuminate\Filesystem\Filesystem::chmod($path, $mode);
+        }
+        
+        /**
          * Delete the file at a given path.
          *
          * @param string|array $paths
@@ -6528,6 +6545,18 @@ namespace {
         }
         
         /**
+         * Set the global reply-to address and name.
+         *
+         * @param string $address
+         * @param string|null $name
+         * @return void 
+         * @static 
+         */
+        public static function alwaysReplyTo($address, $name = null){
+            \Illuminate\Mail\Mailer::alwaysReplyTo($address, $name);
+        }
+        
+        /**
          * Set the global to address and name.
          *
          * @param string $address
@@ -7178,11 +7207,12 @@ namespace {
          *
          * @param int $status
          * @param array $headers
+         * @param string $fallback
          * @return \Illuminate\Http\RedirectResponse 
          * @static 
          */
-        public static function back($status = 302, $headers = array()){
-            return \Illuminate\Routing\Redirector::back($status, $headers);
+        public static function back($status = 302, $headers = array(), $fallback = false){
+            return \Illuminate\Routing\Redirector::back($status, $headers, $fallback);
         }
         
         /**
@@ -8818,6 +8848,8 @@ namespace {
         /**
          * Checks whether the method is safe or not.
          *
+         * @see https://tools.ietf.org/html/rfc7231#section-4.2.1
+         * @param bool $andCacheable Adds the additional condition that the method should be cacheable. True by default.
          * @return bool 
          * @static 
          */
@@ -8829,6 +8861,7 @@ namespace {
         /**
          * Checks whether the method is cacheable or not.
          *
+         * @see https://tools.ietf.org/html/rfc7231#section-4.2.3
          * @return bool 
          * @static 
          */
@@ -8934,7 +8967,7 @@ namespace {
          * It works if your JavaScript library sets an X-Requested-With HTTP header.
          * It is known to work with common JavaScript frameworks:
          *
-         * @link http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
+         * @see http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
          * @return bool true if the request is an XMLHttpRequest, false otherwise
          * @static 
          */
@@ -9295,6 +9328,17 @@ namespace {
          */
         public static function resourceParameters($parameters = array()){
             \Illuminate\Routing\Router::resourceParameters($parameters);
+        }
+        
+        /**
+         * Get or set the verbs used in the resource URIs.
+         *
+         * @param array $verbs
+         * @return array|null 
+         * @static 
+         */
+        public static function resourceVerbs($verbs = array()){
+            return \Illuminate\Routing\Router::resourceVerbs($verbs);
         }
         
         /**
@@ -9844,11 +9888,11 @@ namespace {
          *
          * @param string $table
          * @param \Closure $callback
-         * @return \Illuminate\Database\Schema\Blueprint 
+         * @return void 
          * @static 
          */
         public static function table($table, $callback){
-            return \Illuminate\Database\Schema\Builder::table($table, $callback);
+            \Illuminate\Database\Schema\Builder::table($table, $callback);
         }
         
         /**
@@ -9856,33 +9900,33 @@ namespace {
          *
          * @param string $table
          * @param \Closure $callback
-         * @return \Illuminate\Database\Schema\Blueprint 
+         * @return void 
          * @static 
          */
         public static function create($table, $callback){
-            return \Illuminate\Database\Schema\Builder::create($table, $callback);
+            \Illuminate\Database\Schema\Builder::create($table, $callback);
         }
         
         /**
          * Drop a table from the schema.
          *
          * @param string $table
-         * @return \Illuminate\Database\Schema\Blueprint 
+         * @return void 
          * @static 
          */
         public static function drop($table){
-            return \Illuminate\Database\Schema\Builder::drop($table);
+            \Illuminate\Database\Schema\Builder::drop($table);
         }
         
         /**
          * Drop a table from the schema if it exists.
          *
          * @param string $table
-         * @return \Illuminate\Database\Schema\Blueprint 
+         * @return void 
          * @static 
          */
         public static function dropIfExists($table){
-            return \Illuminate\Database\Schema\Builder::dropIfExists($table);
+            \Illuminate\Database\Schema\Builder::dropIfExists($table);
         }
         
         /**
@@ -9890,11 +9934,11 @@ namespace {
          *
          * @param string $from
          * @param string $to
-         * @return \Illuminate\Database\Schema\Blueprint 
+         * @return void 
          * @static 
          */
         public static function rename($from, $to){
-            return \Illuminate\Database\Schema\Builder::rename($from, $to);
+            \Illuminate\Database\Schema\Builder::rename($from, $to);
         }
         
         /**
@@ -12436,6 +12480,15 @@ namespace {
         }
         
         /**
+         * 
+         *
+         * @static 
+         */
+        public static function cancelButton($buttonText = 'Cancel'){
+            return \UxWeb\SweetAlert\SweetAlertNotifier::cancelButton($buttonText);
+        }
+        
+        /**
          * Make this alert persistent with a confirmation button.
          *
          * @param string $buttonText
@@ -13390,6 +13443,59 @@ namespace {
     }
 
 
+    class Image extends \Intervention\Image\Facades\Image{
+        
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @static 
+         */
+        public static function configure($config = array()){
+            return \Intervention\Image\ImageManager::configure($config);
+        }
+        
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */
+        public static function make($data){
+            return \Intervention\Image\ImageManager::make($data);
+        }
+        
+        /**
+         * Creates an empty image canvas
+         *
+         * @param integer $width
+         * @param integer $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */
+        public static function canvas($width, $height, $background = null){
+            return \Intervention\Image\ImageManager::canvas($width, $height, $background);
+        }
+        
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param integer $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */
+        public static function cache($callback, $lifetime = null, $returnObj = false){
+            return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
+        }
+        
+    }
+
+
     class JavaScript extends \Laracasts\Utilities\JavaScript\JavaScriptFacade{
         
         /**
@@ -13417,4 +13523,6 @@ namespace {
 
 
 }
+
+
 

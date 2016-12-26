@@ -8,8 +8,6 @@
     <!-- One -->
     {{--@include('main.sections.one')--}}
 
-    <!-- Services -->
-    @include('main.sections.services')
 
     <!-- Services Special -->
     @include('main.sections.special')

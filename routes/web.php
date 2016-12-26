@@ -27,7 +27,12 @@ Route::resource('category', 'ServiceCategoryController', [
         'create', 'edit', 'update', 'destroy', 'store'
     ]]);
 
-//Route::resource('staff', 'StaffController');
+Route::get('staff/settings', 'StaffSectionController@edit')->name('staff.setting.edit');
+Route::patch('staff/settings', 'StaffSectionController@update')->name('staff.setting.update');
+
+
+Route::resource('staff', 'StaffController');
+
 
 
 

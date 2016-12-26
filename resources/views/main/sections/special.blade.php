@@ -1,9 +1,8 @@
-<section id="three" class="wrapper style3 special servicesPiece">
+<section id="one" class="wrapper {{ $service_section->section->color }} special servicesPiece">
     <div class="inner">
         <header class="major">
-            <h2>Accumsan mus tortor nunc aliquet</h2>
-            <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br/>
-                fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+            <h2>{{ $service_section->section->title }}</h2>
+            <p>{{ $service_section->section->body }}</p>
         </header>
 
         <div class="row">

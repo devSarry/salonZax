@@ -18,7 +18,7 @@
         <li class="{{ classActivePath('staff') }}">
             <a  href="{{url('staff')}}">Staff</a>
             <span class="settings  pull-right">
-                <a href="#" class="btn btn-primary"
+                <a href="{{ route('staff.setting.edit') }}" class="btn btn-primary"
                    role="button"
                 ><i class="fa fa-cog fa-1x"></i>
                 </a>

@@ -28,7 +28,7 @@ return [
     | This option registers the default validation rules to apply while
     | uploading images.
     */
-    'validationRules'    => 'mimes:jpeg,jpg,png|max:2048', //2mb
+    'validationRules'    => 'required|is_mime:png,jpeg,jpg|max:2048', //2mb
 
     /*
     |--------------------------------------------------------------------------

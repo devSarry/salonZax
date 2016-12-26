@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Section extends Model
 {
     protected $fillable = [
-        'title', 'body'
+        'title', 'body', 'color'
     ];
     /**
      * Get all of the owning sectionable models.
@@ -16,4 +16,6 @@ class Section extends Model
     {
         return $this->morphTo();
     }
+
+
 }

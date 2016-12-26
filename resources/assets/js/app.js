@@ -9,7 +9,8 @@ require('./bootstrap');
 require('sweetalert');
 //require('vuikit');
 //require('./htm5-spectral/main');
-import { dropdown }  from 'vue-strap'
+import { dropdown }  from 'vue-strap';
+import { UploadImage } from './components/UploadImage.vue';
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the body of the page. From here, you may begin adding components to
@@ -19,13 +20,16 @@ import { dropdown }  from 'vue-strap'
 
 
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('UploadImage', require('./components/UploadImage.vue'));
 Vue.component('hero', require('./components/Hero.vue'));
-//Vue.component('alert', require('vue-strap'));
+//Vue.component('upload-image', require('./components/UploadImage.vue'));
+
+
 
 const app = new Vue({
     el: '#app',
     components: {
-        dropdown
+        'dropdown': dropdown,
+        'upload-image': UploadImage
     }
 });

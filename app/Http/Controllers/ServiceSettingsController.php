@@ -28,9 +28,13 @@ class ServiceSettingsController extends Controller
      */
     public function edit()
     {
-        $service = ServiceSection::findOrFail(1);
-
-        return view('admin.services.settings.edit', compact('service'));
+        $data = ServiceSection::findOrFail(1);
+        $pageData = [
+            'section'   => 'Service',
+            'route'     => 'services.setting.update'
+            
+        ];
+        return view('admin.section.settings.edit', compact('data', 'pageData'));
     }
 
     /**
@@ -42,10 +46,11 @@ class ServiceSettingsController extends Controller
      */
     public function update(Request $request)
     {
-
         $requestData = $request->all();
         
         $service_section = ServiceSection::findOrFail(1);
+
+        
         $service_section->section()->first()->update($requestData);
 
         alert()->success('Successfully Updated Service Section');

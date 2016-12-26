@@ -19,7 +19,10 @@ class CreateStaffTable extends Migration
             $table->string('name');
             $table->string('title');
             $table->text('body');
-
+            $table->string('email');
+            $table->date('birthday');
+            $table->boolean('active')->default(1);
+            
             $table->timestamps();
         });
     }

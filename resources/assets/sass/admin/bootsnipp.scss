@@ -9,6 +9,7 @@
 .form-group input[type="checkbox"] + .btn-group > label span:first-child {
   display: none;
 }
+
 .form-group input[type="checkbox"] + .btn-group > label span:last-child {
   display: inline-block;
 }
@@ -16,6 +17,206 @@
 .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
   display: inline-block;
 }
+
 .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
   display: none;
+}
+
+/*Background Color Picker*/
+
+.btn span.glyphicon {
+  opacity: 0;
+}
+
+.btn.active span.glyphicon {
+  opacity: 1;
+}
+
+.btn-style1 {
+  color: #FFFFFF;
+  background-color: #21B2A6;
+  border-color: #232B33;
+}
+
+.btn-style1:hover,
+.btn-style1:focus,
+.btn-style1:active,
+.btn-style1.active,
+.open .dropdown-toggle.btn-style1 {
+  color: #FFFFFF;
+  background-color: #21b2a6;
+  border-color: #232B33;
+}
+
+.btn-style1:active,
+.btn-style1.active,
+.open .dropdown-toggle.btn-style1 {
+  background-image: none;
+}
+
+.btn-style1.disabled,
+.btn-style1[disabled],
+fieldset[disabled] .btn-style1,
+.btn-style1.disabled:hover,
+.btn-style1[disabled]:hover,
+fieldset[disabled] .btn-style1:hover,
+.btn-style1.disabled:focus,
+.btn-style1[disabled]:focus,
+fieldset[disabled] .btn-style1:focus,
+.btn-style1.disabled:active,
+.btn-style1[disabled]:active,
+fieldset[disabled] .btn-style1:active,
+.btn-style1.disabled.active,
+.btn-style1[disabled].active,
+fieldset[disabled] .btn-style1.active {
+  background-color: #21B2A6;
+  border-color: #232B33;
+}
+
+.btn-style1 .badge {
+  color: #21B2A6;
+  background-color: #FFFFFF;
+}
+
+
+/*style 2*/
+.btn-style2 {
+  color: #FFFFFF;
+  background-color: #2E3842;
+  border-color: #232B33;
+}
+
+.btn-style2:hover,
+.btn-style2:focus,
+.btn-style2:active,
+.btn-style2.active,
+.open .dropdown-toggle.btn-style2 {
+  color: #FFFFFF;
+  background-color: #2e3842;
+  border-color: #232B33;
+}
+
+.btn-style2:active,
+.btn-style2.active,
+.open .dropdown-toggle.btn-style2 {
+  background-image: none;
+}
+
+.btn-style2.disabled,
+.btn-style2[disabled],
+fieldset[disabled] .btn-style2,
+.btn-style2.disabled:hover,
+.btn-style2[disabled]:hover,
+fieldset[disabled] .btn-style2:hover,
+.btn-style2.disabled:focus,
+.btn-style2[disabled]:focus,
+fieldset[disabled] .btn-style2:focus,
+.btn-style2.disabled:active,
+.btn-style2[disabled]:active,
+fieldset[disabled] .btn-style2:active,
+.btn-style2.disabled.active,
+.btn-style2[disabled].active,
+fieldset[disabled] .btn-style2.active {
+  background-color: #2E3842;
+  border-color: #232B33;
+}
+
+.btn-style2 .badge {
+  color: #2E3842;
+  background-color: #FFFFFF;
+}
+
+/*style 3*/
+.btn-style3 {
+  color: #FFFFFF;
+  background-color: #505393;
+  border-color: #232B33;
+}
+
+.btn-style3:hover,
+.btn-style3:focus,
+.btn-style3:active,
+.btn-style3.active,
+.open .dropdown-toggle.btn-style3 {
+  color: #FFFFFF;
+  background-color: #505393;
+  border-color: #232B33;
+}
+
+.btn-style3:active,
+.btn-style3.active,
+.open .dropdown-toggle.btn-style3 {
+  background-image: none;
+}
+
+.btn-style3.disabled,
+.btn-style3[disabled],
+fieldset[disabled] .btn-style3,
+.btn-style3.disabled:hover,
+.btn-style3[disabled]:hover,
+fieldset[disabled] .btn-style3:hover,
+.btn-style3.disabled:focus,
+.btn-style3[disabled]:focus,
+fieldset[disabled] .btn-style3:focus,
+.btn-style3.disabled:active,
+.btn-style3[disabled]:active,
+fieldset[disabled] .btn-style3:active,
+.btn-style3.disabled.active,
+.btn-style3[disabled].active,
+fieldset[disabled] .btn-style3.active {
+  background-color: #505393;
+  border-color: #232B33;
+}
+
+.btn-style3 .badge {
+  color: #505393;
+  background-color: #FFFFFF;
+}
+
+/* style 5*/
+
+.btn-style5 {
+  color: #212020;
+  background-color: #FFFFFF;
+  border-color: #212020;
+}
+
+.btn-style5:hover,
+.btn-style5:focus,
+.btn-style5:active,
+.btn-style5.active,
+.open .dropdown-toggle.btn-style5 {
+  color: #212020;
+  background-color: #FFFFFF;
+  border-color: #212020;
+}
+
+.btn-style5:active,
+.btn-style5.active,
+.open .dropdown-toggle.btn-style5 {
+  background-image: none;
+}
+
+.btn-style5.disabled,
+.btn-style5[disabled],
+fieldset[disabled] .btn-style5,
+.btn-style5.disabled:hover,
+.btn-style5[disabled]:hover,
+fieldset[disabled] .btn-style5:hover,
+.btn-style5.disabled:focus,
+.btn-style5[disabled]:focus,
+fieldset[disabled] .btn-style5:focus,
+.btn-style5.disabled:active,
+.btn-style5[disabled]:active,
+fieldset[disabled] .btn-style5:active,
+.btn-style5.disabled.active,
+.btn-style5[disabled].active,
+fieldset[disabled] .btn-style5.active {
+  background-color: #FFFFFF;
+  border-color: #212020;
+}
+
+.btn-style5 .badge {
+  color: #FFFFFF;
+  background-color: #212020;
 }
