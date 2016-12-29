@@ -7,8 +7,10 @@
 
 require('./bootstrap');
 require('sweetalert');
+
 //require('vuikit');
 //require('./htm5-spectral/main');
+
 import { dropdown }  from 'vue-strap';
 import { UploadImage } from './components/UploadImage.vue';
 /**

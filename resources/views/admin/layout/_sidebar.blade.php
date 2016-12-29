@@ -2,7 +2,7 @@
 
     <ul class="nav nav-sidebar">
         <li class="{{ classActivePath('dashboard') }}">
-            <a href="{{url('dashboard')}}">Main</a>
+            <a href="{{url('main')}}">Main</a>
         </li>
 
         <li class="{{ classActivePath('services') }}">

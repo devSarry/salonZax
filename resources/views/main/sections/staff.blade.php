@@ -7,7 +7,7 @@
         @foreach($staff->chunk(3) as $chunk)
         <div class="row">
             @foreach($chunk as $staff)
-            <div class="4u 12u$(medium)">
+            <div class="col-md-6 col-sm-12">
                 <span class="image fit">
                     @laravelImage($staff->image->upload_dir , $staff->image->image, 580, 580,[
                                             'fit' => 'contain'])

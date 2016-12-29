@@ -47,15 +47,6 @@
 </div>
 
 
-<!-- jQuery -->
-
-<!-- Bootstrap Core JavaScript -->
-<!-- Latest compiled and minified JavaScript -->
-<script src="{{url('js/app.js')}}"></script>
-
-<script>
-</script>
-
 @include('admin.layout.footer')
 
 <!-- Include this after the sweet alert js file -->
