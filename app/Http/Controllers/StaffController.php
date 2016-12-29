@@ -65,7 +65,7 @@ class StaffController extends Controller
 
         $input = $request->input('image');
 
-        $this->image->upload(Image::make($input));
+        $this->image->upload(Image::make($input)->isEncoded());
 
         $uploadedFileInfo = $this->image->getUploadedFileInfo();
 
