@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Intervention\Image\ImageManagerStatic as Image;
 use Validator;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,11 +30,10 @@ class AppServiceProvider extends ServiceProvider
             foreach ($params as $param) {
 
                 if ( $mime == 'image/' . $param){
-
                     return true;
                 }
             }
-            return false;
+                return false;
         });
 
     }

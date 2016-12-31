@@ -11,4 +11,8 @@ namespace App;
 
 trait Imagable {
 
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

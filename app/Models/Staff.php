@@ -6,13 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Staff extends Model
 {
+    use Imagable;
+
     protected $fillable = [
         'name', 'title', 'body', 'email', 'birthday', 'active'
     ];
-    public function image()
-    {
-        return $this->morphOne(Image::class, 'imageable');
-    }
+
 
     public function approve()
     {
