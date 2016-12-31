@@ -53,7 +53,7 @@ return [
         'array' => 'The :attribute may not have more than :max items.',
     ],
     'mimes' => 'The :attribute must be a file of type: :values.',
-    'is_mime' => 'The :attribute must be a file of type: :values.',
+    'is_mime' => 'The :attribute must be a file of type: jpeg or png.',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',

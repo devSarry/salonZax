@@ -34,5 +34,8 @@ Route::patch('staff/settings', 'StaffSectionController@update')->name('staff.set
 Route::resource('staff', 'StaffController');
 
 
+Route::get('main/settings', 'MainSectionController@edit')->name('main.setting.edit');
+Route::patch('main/settings', 'MainSectionController@update')->name('main.setting.update');
+
 
 

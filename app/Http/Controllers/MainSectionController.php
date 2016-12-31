@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use AnkitPokhrel\LaravelImage\ImageUploadService;
 use App\MainSection;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
 
-class MainSectionController extends Controller
-{
+
+class MainSectionController extends Controller {
+
+    protected $image;
+
     /**
-     * Create a new controller instance.
-     *
-     * @return void
      */
-    public function __construct()
+    public function __construct(ImageUploadService $image)
     {
         $this->middleware('auth');
+        //set properties for file upload
+        $this->image = $image;
+        $this->image->setUploadField('image'); //default is image
+        $this->image->setUploadFolder('images'); //default is public/uploads/images
     }
 
     /**
@@ -26,11 +32,13 @@ class MainSectionController extends Controller
     {
         $data = MainSection::findOrFail(1);
         $pageData = [
-            'section'   => 'Service',
-            'route'     => 'services.setting.update'
+            'section' => 'Main',
+            'route'   => 'main.setting.update',
 
         ];
-        return view('admin.section.settings.edit', compact('data', 'pageData'));
+
+
+        return view('admin.main.settings.edit', compact('data', 'pageData'));
     }
 
     /**
@@ -42,15 +50,37 @@ class MainSectionController extends Controller
      */
     public function update(Request $request)
     {
-        $requestData = $request->all();
 
-        $service_section = MainSection::findOrFail(1);
+        $image = $request->get('image');
+
+        $main = MainSection::findOrFail(1);
+        //check if image has been updated
+        if ($request->has('image') && 'data' === substr($request->input('image'), 0, 4))
+        {
+
+            $this->image->upload(Image::make($request->input('image')));
+
+            $uploadedFileInfo = $this->image->getUploadedFileInfo();
+
+            $uploadedFileInfo['original_image_name'] = 'banner';
 
 
-        $service_section->section()->first()->update($requestData);
+            //delete the old image.
+            if ( ! empty($path = trim($main->image->upload_dir)))
+            {
+                $this->image->clean(public_path($path), true);
+            }
+            $main->image->update($uploadedFileInfo);
+        }
+        if ($request->has('title'))
+        {
+            $main->section->update($request->except('image'));
 
-        alert()->success('Successfully Updated Service Section');
+            alert()->success('Successfully Updated Main Banner');
 
-        return back();
+            return redirect(route('main.setting.edit'));
+        }
+
+
     }
 }

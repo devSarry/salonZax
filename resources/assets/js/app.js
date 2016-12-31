@@ -8,11 +8,13 @@
 require('./bootstrap');
 require('sweetalert');
 
+
 //require('vuikit');
 //require('./htm5-spectral/main');
 
-import { dropdown }  from 'vue-strap';
+import { dropdown, datepicker }  from 'vue-strap';
 import { UploadImage } from './components/UploadImage.vue';
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the body of the page. From here, you may begin adding components to
@@ -32,6 +34,7 @@ const app = new Vue({
     el: '#app',
     components: {
         'dropdown': dropdown,
-        'upload-image': UploadImage
+        'upload-image': UploadImage,
+        'date-picker': datepicker
     }
 });
