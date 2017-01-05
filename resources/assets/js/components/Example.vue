@@ -1,50 +1,41 @@
 <template>
-    <div v-if="!image">
-        <div class="dropzone-area" @dragenter="hovering = true" @dragleave="hovering = false" :class="{'dropzone-hover': hovering}">
-            <div class="dropzone-text">
-                <span class="dropzone-title">Drop image here or click to select</span>
-                <span class="dropzone-info" v-if="info">{{ info }}</span>
-            </div>
-            <input type="file" @change="onFileChange">
-        </div>
-    </div>
-    <div class="dropzone-preview" v-else>
-        <img :src="image" />
-        <div class="dropzone-close modal-close" @click="removeImage">
-            <span></span>
-            <span></span>
-        </div>
-    </div>
+    <gmap-map
+            :center="center"
+            :zoom="7"
+    >
+        <gmap-marker
+                v-for="m in markers"
+                :position="m.position"
+                :clickable="true"
+                :draggable="true"
+                @click="center=m.position"
+        ></gmap-marker>
+    </gmap-map>
 </template>
 
 <script>
+    /////////////////////////////////////////
+    // New in 0.4.0
+    import * as VueGoogleMaps from 'vue2-google-maps';
+    import Vue from 'vue';
+
+    Vue.use(VueGoogleMaps, {
+        load: {
+            key: 'AIzaSyCl2kU_z6xAOhTlO5PQ7EgvUpkNF9Ebb8g',
+            // libraries: 'places', //// If you need to use place input
+        }
+    });
+
     export default {
-        props: ['info'],
-        data() {
+        data () {
             return {
-                image: '',
-                hovering: false
-            }
-        },
-        methods: {
-            onFileChange(e) {
-                var files = e.target.files || e.dataTransfer.files;
-                if (!files.length) return;
-                this.createImage(files[0]);
-            },
-            createImage(file) {
-                var image = new Image();
-                var reader = new FileReader();
-                var vm = this;
-                reader.onload = (e) => {
-                    vm.image = e.target.result;
-                    vm.hovering = false;
-                };
-                reader.readAsDataURL(file);
-            },
-            removeImage: function (e) {
-                this.image = '';
+                center: {lat: 10.0, lng: 10.0},
+                markers: [{
+                    position: {lat: 10.0, lng: 10.0}
+                }, {
+                    position: {lat: 11.0, lng: 11.0}
+                }]
             }
         }
-    };
+    }
 </script>

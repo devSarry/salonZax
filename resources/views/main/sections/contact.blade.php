@@ -1,44 +1,53 @@
 <section class="wrapper style3">
 <div class="container">
     <header>
-        <h2>Questions or comments? <strong>Get in touch:</strong></h2>
+        <h2>{{ $contact->section->title }}</h2>
     </header>
     <div class="row">
         <div class="6u 12u$(small)">
             <section>
-                <p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet
-                    mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur
-                    leo nibh, rutrum eu malesuada.</p>
+                <p>{{ $contact->section->body }}</p>
                 <div class="row">
                     <div class="6u 12u(mobile)">
                         <ul class="icons">
                             <li class="icon fa-home">
-                                1234 Somewhere Road<br>
-                                Nashville, TN 00000<br>
-                                USA
-                            </li>
+                            @foreach( explode('>,', $contact->wrapped_address) as $address)
+                                {!! $address !!} <br>
+                            @endforeach
                             <li class="icon fa-phone">
-                                (000) 000-0000
+                                {{ $contact->phone_number }}
                             </li>
                             <li class="icon fa-envelope">
-                                <a href="#">info@untitled.tld</a>
+                                <a href="#">{{ $contact->email }}</a>
                             </li>
                         </ul>
                     </div>
                     <div class="6u 12u(mobile)">
                         <ul class="icons">
-                            <li class="icon fa-twitter">
-                                <a href="#">@untitled-tld</a>
+                            @if($contact->facebook_url)
+                            <li>
+                                <a href="{{$contact->facebook_url}}">
+                                    <span class="icon fa-facebook"></span>
+                                    {{$contact->facebook_label ?? ''}}
+                                </a>
                             </li>
-                            <li class="icon fa-instagram">
-                                <a href="#">instagram.com/untitled-tld</a>
-                            </li>
-                            <li class="icon fa-dribbble">
-                                <a href="#">dribbble.com/untitled-tld</a>
-                            </li>
-                            <li class="icon fa-facebook">
-                                <a href="#">facebook.com/untitled-tld</a>
-                            </li>
+                            @endif
+                            @if($contact->twitter_url)
+                                <li>
+                                    <a href="{{$contact->twitter_url}}">
+                                        <span class="icon fa-twitter"></span>
+                                        {{$contact->twitter_label ?? ''}}
+                                    </a>
+                                </li>
+                            @endif
+                            @if($contact->instagram_url)
+                                <li>
+                                    <a href="{{$contact->instagram_url}}">
+                                        <span class="icon fa-instagram"></span>
+                                        {{$contact->instagram_label ?? ''}}
+                                    </a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                 </div>

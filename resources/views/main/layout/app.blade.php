@@ -61,5 +61,9 @@
 <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=IzaSyC5mOdqmvih8TKLgafcvrPQIeaRZ1IuJ9s=initMap">
+</script>
+
 </body>
 </html>

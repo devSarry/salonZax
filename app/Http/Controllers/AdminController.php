@@ -24,5 +24,9 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.dashboard');
+
+        //show how many messages there are.
+
+        //how many visitor in 24hr period
     }
 }

@@ -3,6 +3,29 @@
 @section('content')
     <h1 class="page-header">Dashboard</h1>
     <hr>
+    <input v-model=vm.searchPlace v-gmaps-searchbox:location=vm>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">26</div>
+                        <div>New Comments!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
     <div class="row" id="app">
         <div class="col-md-6">
             <div class="panel panel-default">
@@ -27,3 +50,10 @@
     </div>
 
 @stop
+
+curl -s --user 'api:key-415dde49fdd29b70bf071090b632bd24' \
+https://api.mailgun.net/v3/sandbox65c0012aaeaa4648a9f0a66946631d3b.mailgun.org \
+-F from='Excited User <mailgun@YOUR_DOMAIN_NAME>' \
+    -F to=jsarry@gmail.com \
+    -F subject='Hello' \
+    -F text='Testing some Mailgun awesomness!'

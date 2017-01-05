@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <h1>{{ $pageData['section'] }} Page: Edit</h1>
-            <form action="{!! route( $pageData['route']) !!}" method="post" role="form">
+            <form action="{!! route( $pageData['route']) !!}" method="post" role="form" >
                 {{ method_field('PATCH') }}
                 {{ csrf_field() }}
 
@@ -34,32 +34,36 @@
                     {!! $errors->first('body', '<span class="help-block">:message</span>') !!}
                 </div>
 
-                <div class="well well-sm form-group">
+                @yield('form-options')
+
+                <div class="well well-sm">
 
                     <h3>Background Color</h3>
 
-                    <div class="btn-group" data-toggle="buttons">
 
-                        <label class="btn btn-style1 {{ classActiveButton('style1', $data->section->color ) }}">
-                            <input type="radio" name="color" id="color1" value="style1"  autocomplete="off">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </label>
+                        <div class="btn-group" data-toggle="buttons">
 
-                        <label class="btn btn-style2 {{ classActiveButton('style2', $data->section->color ) }}">
-                            <input type="radio" name="color" id="color2"  value="style2"  autocomplete="off">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </label>
+                            <label class="btn btn-style1 {{ classActiveButton('style1', $data->section->color ) }}">
+                                <input type="radio" name="color" id="color1" value="style1"  autocomplete="off">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </label>
 
-                        <label class="btn btn-style3 {{ classActiveButton('style3', $data->section->color ) }}">
-                            <input type="radio" name="color" id="color3" value="style3"  autocomplete="off">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </label>
+                            <label class="btn btn-style2 {{ classActiveButton('style2', $data->section->color ) }}">
+                                <input type="radio" name="color" id="color2"  value="style2"  autocomplete="off">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </label>
 
-                        <label class="btn btn-style5 {{ classActiveButton('style4', $data->section->color ) }}">
-                            <input type="radio" name="color" id="color4" value="style4"  autocomplete="off">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </label>
-                    </div>
+                            <label class="btn btn-style3 {{ classActiveButton('style3', $data->section->color ) }}">
+                                <input type="radio" name="color" id="color3" value="style3"  autocomplete="off">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </label>
+
+                            <label class="btn btn-style5 {{ classActiveButton('style4', $data->section->color ) }}">
+                                <input type="radio" name="color" id="color4" value="style4"  autocomplete="off">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </label>
+                        </div>
+
 
 
                 </div>

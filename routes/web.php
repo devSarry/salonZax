@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\ContactController;
+
 Route::get('/', 'HomeController@index');
 
 Auth::routes();
@@ -36,6 +38,11 @@ Route::resource('staff', 'StaffController');
 
 Route::get('main/settings', 'MainSectionController@edit')->name('main.setting.edit');
 Route::patch('main/settings', 'MainSectionController@update')->name('main.setting.update');
+
+Route::get('contact/settings', 'ContactSectionController@edit')->name('contact.setting.edit');
+Route::patch('contact/settings', 'ContactSectionController@update')->name('contact.setting.update');
+
+Route::resource('contact', ContactController::class);
 
 
 

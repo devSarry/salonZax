@@ -1,4 +1,8 @@
         <upload-image image-src="{{ $staff->image ? url(($staff->image->upload_dir) . ($staff->image->image)): null }}" info="{!! $errors->first('image') !!}"></upload-image>
+
+        {{ debugbar()->info($errors) }}
+
+        {!! $errors->first('image', '<span class="help-block">:message</span>') !!}
         <div class="form-group {{ $errors->has('service') ? 'has-error' : '' }}">
             <label for="name">Name</label>
             <input type="text"
@@ -9,6 +13,7 @@
             >
             {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
         </div>
+
 
         <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
             <label for="title">Title</label>
@@ -50,7 +55,7 @@
                                   id="body"
                                   required
                         >{{old('body', is_param($staff->body))}}</textarea>
-            {!! $errors->first('price', '<span class="help-block">:message</span>') !!}
+            {!! $errors->first('body', '<span class="help-block">:message</span>') !!}
         </div>
 
 

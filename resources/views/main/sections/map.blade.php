@@ -1,6 +1,6 @@
 <div id="sc_googlemap_1901503874" class="sc_googlemap inited"
      style="width: 100%; height: 400px; position: relative; overflow: hidden;"
-     data-address="77 Cordova St E, Vancouver BC V6A1K3" data-latlng="" data-zoom="16" data-style="greyscale"
+     data-address="" data-latlng="" data-zoom="16" data-style="greyscale"
      data-point="http://www.18amendment.com/wp-content/uploads/2015/05/map_marker.png">
     <div style="height: 100%; width: 100%; position: absolute; background-color: rgb(229, 227, 223);">
         <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"
@@ -173,7 +173,7 @@
             </div>
             <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
                 <a style="position: static; overflow: visible; float: none; display: inline;" target="_blank"
-                   href="https://maps.google.com/maps?ll=49.282383,-123.102829&amp;z=16&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3"
+                   href="https://maps.google.com/maps?ll=60.4501414,22.2649019,&amp;z=16&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3"
                    title="Click to see this area on Google Maps">
                     <div style="width: 66px; height: 26px; cursor: pointer;"><img
                                 style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"
@@ -187,7 +187,7 @@
                     <img style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;"
                          src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false"></div>
             </div>
-            <div class="gmnoprint"
+                <div class="gmnoprint"
                  style="z-index: 1000001; position: absolute; right: 161px; bottom: 0px; width: 121px;">
                 <div draggable="false" style="-moz-user-select: none; height: 14px; line-height: 14px;"
                      class="gm-style-cc">
@@ -231,7 +231,7 @@
                 <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
                     <a target="_new" title="Report errors in the road map or imagery to Google"
                        style="font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;"
-                       href="https://www.google.com/maps/@49.2823825,-123.102829,16z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3">Report
+                       href="https://www.google.com/maps/@60.45014138306201,22.26490187194214,16z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3">Report
                         a map error</a></div>
             </div>
             <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom"

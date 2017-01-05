@@ -23,9 +23,7 @@
     export default {
         props: ['info', 'imageSrc'],
 
-        created() {
-            this.setImage();
-        },
+
         data() {
             return {
                 image: '',
@@ -49,11 +47,9 @@
                 reader.readAsDataURL(file);
 
             },
-            removeImage: function (e) {
+            removeImage: function () {
                 this.image = '';
                 this.imageSrc = '';
-            },
-            setImage: function () {
             }
         }
     };

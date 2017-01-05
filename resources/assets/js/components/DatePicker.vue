@@ -1,27 +1,30 @@
+
+
 <template>
-    <div>
-        <header-component/>
-        <div>this is template body</div>
-        <other-component/>
+    <div class="date-select">
+        <link rel="import" href="static/bower_components/vaadin-date-picker/vaadin-date-picker.html">
+        <vaadin-date-picker
+                class="custom-theme"
+                :label="label"
+                :value="date"
+                v-on:value-changed="onDateChange">
+        </vaadin-date-picker>
     </div>
 </template>
-<style>
-    body{
-        background-color:#ff0000;
-    }
-</style>
+
 <script>
-    import HeaderComponent from './components/header.vue'
-    import OtherComponent from './components/other.vue'
-    export default{
-        data(){
-            return{
-                msg:'hello vue'
+    export default {
+        data () {
+            return {
+                label: 'Select a date',
+                date: '2016-12-31'
             }
         },
-        components:{
-            'other-component':OtherComponent,
-            HeaderComponent,
+        methods: {
+            onDateChange: function (e) {
+                console.log('date changed: ' + e.detail.value)
+            }
         }
     }
 </script>
+

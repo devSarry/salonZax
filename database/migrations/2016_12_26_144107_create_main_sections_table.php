@@ -15,6 +15,9 @@ class CreateMainSectionsTable extends Migration
     {
         Schema::create('main_sections', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->string('scroll')->nullable();
+
             $table->timestamps();
         });
     }

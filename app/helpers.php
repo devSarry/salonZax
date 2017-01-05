@@ -29,9 +29,9 @@ if (!function_exists('intToMonth')) {
 }
 
 if (!function_exists('classActivePath')) {
-    function classActivePath($path)
+    function classActivePath($path, $optionalPath = null)
     {
-        return Request::is($path) ? 'active' : '';
+        return Request::is($path) || Request::is($optionalPath) ? 'active' : '';
     }
 }
 

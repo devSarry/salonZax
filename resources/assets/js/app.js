@@ -8,33 +8,44 @@
 require('./bootstrap');
 require('sweetalert');
 
-
-//require('vuikit');
-//require('./htm5-spectral/main');
-
 import { dropdown, datepicker }  from 'vue-strap';
-import { UploadImage } from './components/UploadImage.vue';
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the body of the page. From here, you may begin adding components to
- * the application, or feel free to tweak this setup for your needs.
- */
-
-
 
 
 Vue.component('UploadImage', require('./components/UploadImage.vue'));
-Vue.component('hero', require('./components/Hero.vue'));
-//Vue.component('upload-image', require('./components/UploadImage.vue'));
+Vue.component('LocationPicker', require('./components/LocationPicker.vue'));
+Vue.component('SocialMediaInput', require('./components/SocialMediaInput.vue'));
 
+import VueGmaps from 'vue-gmaps'
+
+const VueGoogleMaps = require('vue2-google-maps');
+
+Vue.use(VueGoogleMaps, {
+    installComponents: true,
+    load: {
+        key: 'AIzaSyCl2kU_z6xAOhTlO5PQ7EgvUpkNF9Ebb8g',
+        libraries: 'places'
+    }
+});
+
+
+
+/*
+Vue.use(VueGmaps, {
+    key: 'AIzaSyCl2kU_z6xAOhTlO5PQ7EgvUpkNF9Ebb8g'
+});
+*/
 
 
 const app = new Vue({
     el: '#app',
+    data: {
+        vm: {
+            searchPlace: '',
+            location: {}
+        }
+    },
     components: {
         'dropdown': dropdown,
-        'upload-image': UploadImage,
         'date-picker': datepicker
     }
 });

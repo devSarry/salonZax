@@ -7,7 +7,6 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
 @import url(sweetalert.css);
-@import url(node_modules/sweetalert/themes/twitter/twitter.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
