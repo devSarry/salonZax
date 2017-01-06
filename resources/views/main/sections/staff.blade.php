@@ -9,8 +9,8 @@
             @foreach($chunk as $staff)
             <div class="col-md-6 col-sm-12">
                 <span class="image fit">
-                    @laravelImage($staff->image->upload_dir , $staff->image->image, 580, 580,[
-                                            'fit' => 'contain'])
+                    @laravelImage($staff->image->upload_dir , $staff->image->image, 300, 300,[
+                                            'fit' => 'crop-center'])
                 </span>
                 <h3>{{ $staff->title }}</h3>
                 <p>{{ $staff->body }}</p>

@@ -50,7 +50,6 @@
         data(){
             return {
                 types: ['address'],
-                view: {},
                 place: {},
                 position: {},
                 formData: {}

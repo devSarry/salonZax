@@ -14,6 +14,7 @@
 use App\Http\Controllers\ContactController;
 
 Route::get('/', 'HomeController@index');
+Route::post('/','HomeController@message');
 
 Auth::routes();
 

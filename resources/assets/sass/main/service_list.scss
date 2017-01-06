@@ -32,13 +32,13 @@
 
 
 .servicesPiece .singleService {
-  background: url(../images/services-border.png) repeat-x top;
+  background: url(../assets/images/services-border.png) repeat-x top;
   margin: 0 1%;
   padding: 25px 0 10px 0;
 }
 
 .servicesPiece .singleService:last-child {
-  background: url(../images/services-border.png) repeat-x top, url(../images/services-border.png) repeat-x bottom;
+  background: url(../assets/images/services-border.png) repeat-x top, url(../assets/images/services-border.png) repeat-x bottom;
   padding-bottom: 25px;
 }
 

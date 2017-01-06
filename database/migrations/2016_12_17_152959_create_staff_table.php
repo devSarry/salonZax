@@ -16,11 +16,11 @@ class CreateStaffTable extends Migration
         Schema::create('staff', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('name');
-            $table->string('title');
-            $table->text('body');
-            $table->string('email');
-            $table->date('birthday');
+            $table->string('name')->nullable();
+            $table->string('title')->nullable();
+            $table->text('body')->nullable();
+            $table->string('email')->nullable();
+            $table->date('birthday')->nullable();
             $table->boolean('active')->default(1);
             
             $table->timestamps();

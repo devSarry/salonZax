@@ -18,7 +18,7 @@ return [
      |
      | Your route prefix for glide
      */
-    'routePath'          => 'laravel-image',
+    'routePath'          => 'opt',
 
     /*
     |--------------------------------------------------------------------------

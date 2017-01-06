@@ -1,6 +1,6 @@
 /* CSS used here will be applied after bootstrap.css */
 body {
-  background: url("../images/LoginPage.png") no-repeat center center fixed;
+  background: url("../assets/images/LoginPage.png") no-repeat center center fixed;
   background-size: cover;
 }
 

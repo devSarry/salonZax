@@ -53,30 +53,7 @@
                 </div>
             </section>
         </div>
-        <div class="6u 12u$(medium)">
-            <section>
-                <form method="post" action="#">
-                    <div class="row uniform">
-                        <div class="6u 12u(mobile)">
-                            <input name="name" placeholder="Name" type="text">
-                        </div>
-                        <div class="6u 12u(mobile)">
-                            <input name="email" placeholder="Email" type="text">
-                        </div>
-                    </div>
-                    <div class="row uniform">
-                        <div class="12u">
-                            <textarea name="message" placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="row uniform">
-                        <div class="12u">
-                            <a href="#" class="form-button-submit button icon fa-envelope">Send Message</a>
-                        </div>
-                    </div>
-                </form>
-            </section>
-        </div>
+        @include('main.sections._contactForm')
     </div>
 </div>
 </section>

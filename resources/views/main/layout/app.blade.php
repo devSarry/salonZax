@@ -17,20 +17,16 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
 <body class="landing">
-
-<!-- Page Wrapper -->
-<div id="page-wrapper" style="background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{!! url(($main_section->image->upload_dir) . ($main_section->image->image)) !!}')">
+<div id="app">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper" style="background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{!! url(($main_section->image->upload_dir) . ($main_section->image->image)) !!}')">
 
     @include('main.layout._header')
 
     @yield('content')
 
-
-
-
-
-
     <!-- Three -->
+
 
 
 
@@ -48,7 +44,9 @@
         </ul>
     </footer>
 
+    </div>
 </div>
+
 
 <!-- Scripts -->
 
@@ -60,10 +58,9 @@
 <script src="assets/js/util.js"></script>
 <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
+<script src="js/app.js"></script>
+@include('sweet::alert')
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=IzaSyC5mOdqmvih8TKLgafcvrPQIeaRZ1IuJ9s=initMap">
-</script>
 
 </body>
 </html>
