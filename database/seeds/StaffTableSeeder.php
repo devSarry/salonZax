@@ -22,7 +22,7 @@ class StaffTableSeeder extends Seeder
 
         $staff->image()->create([
             'image' => 'staff.png',
-            'upload_dir' => 'assets/images/',
+            'upload_dir' => 'seededStaff/',
             'original_image_name' => 'staff.png',
             'size' => 500,
             'extension' => 'png',

@@ -5,8 +5,8 @@
                 <div class="well well-sm">
                     <div class="row">
                         <div class="col-sm-6 col-md-4">
-                            @laravelImage($member->image->upload_dir , $member->image->image, 300, 580,[
-                                            'fit' => 'contain'], [
+                            @laravelImage($member->image->upload_dir , $member->image->image, 300, 300,[
+                                            'fit' => 'crop-top'], [
                                             'class' => 'img-rounded img-responsive'])
                         </div>
                         <div class="col-sm-6 col-md-8">

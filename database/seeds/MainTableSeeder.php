@@ -30,7 +30,7 @@ CRAFTED BY HTML5 UP.',
 
             $section->image()->create([
                 'image' => 'banner.jpg',
-                'upload_dir' => 'images/',
+                'upload_dir' => 'seededBanner/',
                 'original_image_name' => 'banner.jpg',
                 'size' => 500,
                 'extension' => 'jpg',
