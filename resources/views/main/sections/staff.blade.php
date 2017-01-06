@@ -7,12 +7,13 @@
         @foreach($staff->chunk(3) as $chunk)
         <div class="row">
             @foreach($chunk as $staff)
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <span class="image fit">
                     @laravelImage($staff->image->upload_dir , $staff->image->image, 300, 300,[
-                                            'fit' => 'crop-center'])
+                                            'fit' => 'crop-top'])
                 </span>
-                <h3>{{ $staff->title }}</h3>
+                <h2> {{ $staff->name }}: <strong>{{ $staff->title }}</strong></h2>
+
                 <p>{{ $staff->body }}</p>
             </div>
             @endforeach
