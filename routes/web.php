@@ -11,7 +11,6 @@
 |
 */
 
-use App\Http\Controllers\ContactController;
 
 Route::get('/', 'HomeController@index');
 Route::post('/','HomeController@message');
@@ -51,7 +50,8 @@ Route::patch('main/settings', 'MainSectionController@update')->name('main.settin
 Route::get('contact/settings', 'ContactSectionController@edit')->name('contact.setting.edit');
 Route::patch('contact/settings', 'ContactSectionController@update')->name('contact.setting.update');
 
-Route::resource('contact', ContactController::class);
+Route::resource('contact/messages', MessagesController::class);
 
+Route::resource('contact', ContactController::class);
 
 

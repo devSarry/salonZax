@@ -32,7 +32,7 @@
         </li>
 
         <li class="{{ classActivePath('contact') }}">
-            <a href="{{url('contact/')}}">Contact</a>
+            <a href="{{url('contact/messages')}}">Contact</a>
             <span class="settings  pull-right  raw-margin-right-2">
                 <a href="{{ route('contact.setting.edit') }}" class="btn btn-primary"
                    role="button"

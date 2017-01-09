@@ -60,4 +60,6 @@ class ContactSectionController extends Controller
 
         return back();
     }
+
+    
 }

@@ -10,14 +10,6 @@ require('sweetalert');
 
 import { dropdown, datepicker }  from 'vue-strap';
 
-
-Vue.component('UploadImage', require('./components/UploadImage.vue'));
-Vue.component('LocationPicker', require('./components/LocationPicker.vue'));
-Vue.component('SocialMediaInput', require('./components/SocialMediaInput.vue'));
-Vue.component('SalonMap', require('./components/SalonMap.vue'));
-
-
-
 const VueGoogleMaps = require('vue2-google-maps');
 
 Vue.use(VueGoogleMaps, {
@@ -27,6 +19,16 @@ Vue.use(VueGoogleMaps, {
         libraries: 'places'
     }
 });
+
+
+
+Vue.component('UploadImage', require('./components/UploadImage.vue'));
+Vue.component('LocationPicker', require('./components/LocationPicker.vue'));
+Vue.component('SocialMediaInput', require('./components/SocialMediaInput.vue'));
+Vue.component('SalonMap', require('./components/SalonMap.vue'));
+
+
+
 
 
 
