@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Message;
 use Illuminate\Http\Request;
 use Analytics;
 use Spatie\Analytics\Period;
@@ -27,10 +28,11 @@ class AdminController extends Controller
     {
 
         //show how many messages there are.
+        $messagesCount = Message::all()->count();
 
         //how many visitor in 24hr period
         $analyticsData = $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(1))->first()['visitors'];
 
-        return view('admin.dashboard', compact('analyticsData'));
+        return view('admin.dashboard', compact('analyticsData', 'messagesCount'));
     }
 }
