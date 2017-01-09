@@ -52,7 +52,7 @@ services:
                 - INSTALL_ZIP_ARCHIVE=false
                 - INSTALL_BCMATH=true
                 - INSTALL_MEMCACHED=true
-                - INSTALL_OPCACHE=true
+                - INSTALL_OPCACHE=false
                 - INSTALL_AEROSPIKE_EXTENSION=false
                 - CODEIGNITER=false
                 - INSTALL_EXIF=true

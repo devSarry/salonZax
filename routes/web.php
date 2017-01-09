@@ -16,6 +16,14 @@ use App\Http\Controllers\ContactController;
 Route::get('/', 'HomeController@index');
 Route::post('/','HomeController@message');
 
+/*Route::get('/test', function(){
+    $analyticsData = $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(30));
+
+    //dd($analyticsData);
+
+    return json_encode($analyticsData);
+});*/
+
 Auth::routes();
 
 Route::get('/dashboard', 'AdminController@index');

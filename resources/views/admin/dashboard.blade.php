@@ -34,12 +34,12 @@
                         <i class="fa fa-group fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge">8</div>
-                        <div>Visitors</div>
+                        <div class="huge">{{ ($analyticsData) }}</div>
+                        <div>Visitors Today</div>
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="{{ env('GOOGLE_ANALYTICS_DASHBOARD') }}">
                 <div class="panel-footer">
                     <span class="pull-left">View Details</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
