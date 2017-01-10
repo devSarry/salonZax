@@ -28,7 +28,7 @@ class HomeController extends Controller
         $staff_section = StaffSection::first();
 
         $contact = ContactSection::first();
-        
+                
         $staff = Staff::with('image')->get();
 
         $chunks = $categories->split(2);
