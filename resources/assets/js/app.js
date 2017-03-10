@@ -15,7 +15,7 @@ const VueGoogleMaps = require('vue2-google-maps');
 Vue.use(VueGoogleMaps, {
     installComponents: true,
     load: {
-        key: 'AIzaSyCl2kU_z6xAOhTlO5PQ7EgvUpkNF9Ebb8g',
+        key: 'AIzaSyB3qiU9XQ7jzOnHJsrPcw-FcFy9qSdKKWw',
         libraries: 'places'
     }
 });
@@ -26,17 +26,6 @@ Vue.component('UploadImage', require('./components/UploadImage.vue'));
 Vue.component('LocationPicker', require('./components/LocationPicker.vue'));
 Vue.component('SocialMediaInput', require('./components/SocialMediaInput.vue'));
 Vue.component('SalonMap', require('./components/SalonMap.vue'));
-
-
-
-
-
-
-/*
-Vue.use(VueGmaps, {
-    key: 'AIzaSyCl2kU_z6xAOhTlO5PQ7EgvUpkNF9Ebb8g'
-});
-*/
 
 
 const app = new Vue({

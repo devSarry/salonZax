@@ -33,6 +33,11 @@ class AdminController extends Controller
         //how many visitor in 24hr period
         $analyticsData = $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(1))->first()['visitors'];
 
+
+        if(!$analyticsData){
+            $analyticsData = 0;
+        }
+
         return view('admin.dashboard', compact('analyticsData', 'messagesCount'));
     }
 }

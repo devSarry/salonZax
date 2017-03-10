@@ -30,7 +30,7 @@ class MessagesController extends Controller
     {
         Message::destroy($id);
 
-        alert()->success('Successfully Deleted Message');
+        alert()->success('Message Deleted');
 
         return redirect(route('messages.index'));
     }
