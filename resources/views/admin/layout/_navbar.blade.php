@@ -14,6 +14,45 @@
 
         <div class="navbar-collapse collapse" id="bs-navbar-collapse-1" aria-expanded="false">
             <ul class="nav navbar-nav navbar-right">
+                <li class="hidden-lg hidden-md {{ classActivePath('dashboard', 'main/settings') }}">
+                    <a href="{{url('dashboard')}}">Main</a>
+                    <span class="settings  pull-right">
+                        <a href="{{ route('main.setting.edit') }}" class="btn btn-primary"
+                           role="button"
+                        ><i class="fa fa-cog fa-1x"></i>
+                        </a>
+                    </span>
+                </li>
+
+                <li class="hidden-lg hidden-md {{ classActivePath('services', 'services/settings') }}">
+                    <a href="{{url('services')}}">Services</a>
+                    <span class="settings  pull-right">
+                        <a href="{{ route('services.setting.edit') }}" class="btn btn-primary"
+                           role="button"
+                        ><i class="fa fa-cog fa-1x"></i>
+                        </a>
+                    </span>
+                </li>
+
+                <li class="hidden-lg hidden-md {{ classActivePath('staff', 'staff/settings') }}">
+                    <a  href="{{url('staff')}}">Staff</a>
+                    <span class="settings  pull-right">
+                        <a href="{{ route('staff.setting.edit') }}" class="btn btn-primary"
+                           role="button"
+                        ><i class="fa fa-cog fa-1x"></i>
+                        </a>
+                    </span>
+                </li>
+
+                <li class="hidden-lg hidden-md {{ classActivePath('contact') }}">
+                    <a href="{{url('contact/messages')}}">Contact</a>
+                    <span class="settings  pull-right  raw-margin-right-2">
+                        <a href="{{ route('contact.setting.edit') }}" class="btn btn-primary"
+                           role="button"
+                        ><i class="fa fa-cog fa-1x"></i>
+                        </a>
+                    </span>
+                </li>
                 <li>
                     <a href="{{ url('/logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
