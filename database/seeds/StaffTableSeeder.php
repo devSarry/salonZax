@@ -13,7 +13,7 @@ class StaffTableSeeder extends Seeder
     {
         $this->populateServiceSection();
 
-        $staff = \App\Staff::create([
+/*        $staff = \App\Staff::create([
             'name' => 'Pizza Luis',
             'title' => 'Head Hunter',
             'body' => 'Employee of the month',
@@ -27,7 +27,7 @@ class StaffTableSeeder extends Seeder
             'size' => 500,
             'extension' => 'png',
             'mime_type' => 'png'
-        ]);
+        ]);*/
     }
 
     private function populateServiceSection(){

@@ -26,7 +26,7 @@
                         <ul class="icons">
                             @if($contact->facebook_url)
                             <li>
-                                <a href="{{$contact->facebook_url}}">
+                                <a href="{!! $contact->facebook_url !!}">
                                     <span class="icon fa-facebook"></span>
                                     {{$contact->facebook_label ?? ''}}
                                 </a>

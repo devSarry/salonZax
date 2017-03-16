@@ -48,7 +48,6 @@ class ContactSectionController extends Controller
 
         $contact_section->section->update($requestData);
 
-
         $contact_section->update($request->except(['location', 'title', 'body' ]));
 
 

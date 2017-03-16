@@ -8394,7 +8394,7 @@ img {
   background-color: #428bca;
 }
 
-li > .settings > .btn {
+.settings > .btn {
   border-radius: 0px;
   border: 2px;
   margin-top: 2px;
