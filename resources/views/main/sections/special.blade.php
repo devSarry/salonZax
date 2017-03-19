@@ -17,7 +17,7 @@
                         do stuff
             --}}
             @foreach($chunks as $chunk)
-                <div class="col-sm-6">
+                <div class="service-item">
                     @foreach($chunk as $category)
                         @if($category->approved)
                             <div class="singleService">

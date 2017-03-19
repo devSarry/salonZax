@@ -2,7 +2,6 @@
 
 @section('content')
 
-    <div class="container">
         <div class="row">
             <a class="btn btn-success pull-right  raw-margin-top-24"
                href="{!! route('category.create') !!}">Add New Category</a>
@@ -15,7 +14,7 @@
         <hr>
         <div class="row">
             @foreach($categories as $category)
-                <div class="col-md-6">
+                <div class="service-index col-md-6">
                     <div class="row">
 
                         <div class="col-md-6">
@@ -122,7 +121,6 @@
                 </div>
             @endforeach
         </div>
-    </div>
 
 @stop
 

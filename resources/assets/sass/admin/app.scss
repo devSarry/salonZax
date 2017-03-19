@@ -20,9 +20,19 @@ img {
   width: 100%;
 }
 
-/*
- * Global add-ons
- */
+.admin-view-container{
+  @extend .container;
+  max-width: 100%;
+  margin-left: 0;
+}
+
+.service-index {
+  min-width: 573px;
+}
+
+  /*
+   * Global add-ons
+   */
 
 .sub-header {
   padding-bottom: 10px;
