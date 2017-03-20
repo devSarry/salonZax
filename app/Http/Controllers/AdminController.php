@@ -31,9 +31,8 @@ class AdminController extends Controller
         $messagesCount = Message::all()->count();
 
         //how many visitor in 24hr period
-        $analyticsData = $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(1))->first()['visitors'];
-
-
+        $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(1))->pluck('visitors')->sum();
+        
         if(!$analyticsData){
             $analyticsData = 0;
         }
