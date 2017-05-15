@@ -21,10 +21,10 @@ class MainTableSeeder extends Seeder {
 
             $section = \App\MainSection::create();
             $section->section()->create([
-                'title' => 'SALON DEMO',
-                'body'  => '123 BRODWAY ST
-SITE TEMPLATE FREEBIE 
-CRAFTED BY HTML5 UP.',
+                'title' => 'Za<div class="special-character">✄</div>o',
+                'body'  => 'parturi kampaamo 
+Nyt 2 liikettä
+Brahenkatu 10 Ja Uudenmaankat 4',
 
             ]);
 

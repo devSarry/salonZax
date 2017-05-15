@@ -2,14 +2,19 @@
 
 @section('form-options')
 
-
     <h3>Contact Info</h3>
 
-    <location-picker db-location="{{ $data->formated_address }}"
-                     lat="{{ $data->lat }}"
-                     lng="{{ $data->long }}">
+    @foreach($addresses as $location)
 
-    </location-picker>
+        <location-picker db-location="{{ $location->formated_address }}"
+                         lat="{{ $location->lat }}"
+                         lng="{{ $location->long }}"
+                         index="{{ $loop->index }}">
+
+        </location-picker>
+
+    @endforeach
+
 
     <div class="form-group">
         <label for="email">Email</label>

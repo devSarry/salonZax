@@ -25,13 +25,9 @@
 
     @yield('content')
 
-    <!-- Three -->
-
-
-
 
     <!-- Footer -->
-    @include('main.layout._footer')
+
 
     </div>
 </div>

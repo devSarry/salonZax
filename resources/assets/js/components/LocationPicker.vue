@@ -12,6 +12,7 @@
 
             >
             </gmap-autocomplete>
+
         </div>
 
         <div class="form-group map-container">
@@ -31,7 +32,7 @@
             </gmap-map>
         </div>
 
-        <input type="hidden" name="location" :value="formData">
+        <input type="hidden" :name="'location[' + index + ']'" :value="formData">
 
     </div>
 </template>
@@ -46,7 +47,7 @@
 <script>
     import * as VueGoogleMaps from 'vue2-google-maps';
     export default{
-        props: ['dbLocation', 'lat', 'lng'],
+        props: ['dbLocation', 'lat', 'lng','index'],
         data(){
             return {
                 types: ['address'],
@@ -74,10 +75,10 @@
                     formated_address: this.place.formatted_address,
                     wrapped_address: this.place.adr_address,
                     street_number: address[0].short_name,
-                    route: address[1].short_name,
-                    locality: address[2].long_name,
+                    route: address[1].short_name || 'null',
+                    locality: address[2].long_name || 'null',
                     country: address[4].long_name,
-                    postal_code: address[5].long_name,
+                    postal_code:  address[5] ? address[5].long_name : 'null',
                     lat: this.position.lat,
                     long: this.position.lng
                 };

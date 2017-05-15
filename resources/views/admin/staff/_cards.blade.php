@@ -52,18 +52,18 @@
                                                 <li class=" dropdown">
                                                     <button class="btn btn-danger btn-block"
                                                             type="submit"
-                                                            onclick="return confirm('Are you sure you want to delete this workout?')">
+                                                            onclick="return confirm('Are you sure you want to delete this post?')">
                                                             <i class="fa fa-trash"></i> Delete
                                                     </button>
                                                 </li>
                                             </form>
                                         </ul>
                                     </span>
-                            <h4>{{ $member->name }}</h4>
+                            <h4>{{ $member->name?? $member->title}}</h4>
                             <p>
-                                <i class="fa fa-envelope"></i> {{ $member->email }}
+                                <i class="fa fa-envelope"></i> {{ $member->email ?? 'No Email'}}
                                 <br/>
-                                <i class="fa fa-gift"></i> {{ $member->birthday }}
+                                <i class="fa fa-gift"></i> {{ $member->birthday ?? 'No Birthday' }}
                             </p>
                             <p>
                                 {{ $member->body }}

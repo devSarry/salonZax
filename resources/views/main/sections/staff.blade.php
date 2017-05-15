@@ -12,7 +12,7 @@
                     @laravelImage($staff->image->upload_dir , $staff->image->image, 300, 300,[
                                             'fit' => 'crop-top'])
                 </span>
-                <h2> {{ $staff->name }}: <strong>{{ $staff->title }}</strong></h2>
+                <h2> {{ $staff->title }}</h2>
 
                 <p>{{ $staff->body }}</p>
             </div>

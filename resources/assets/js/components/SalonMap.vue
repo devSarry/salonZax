@@ -1,7 +1,7 @@
 <template>
     <div>
         <gmap-map
-                :center="position"
+                :center="center"
                 map-type-id="roadmap"
                 :zoom="15"
                 :options="{styles: mapStyle, scrollwheel: false}"
@@ -9,20 +9,25 @@
                 class="form-control"
         >
             <gmap-marker
-                    :position="position"
+                    :key="index"
+                    v-for="(m, index) in markers"
+                    :position="m.position"
                     :clickable="true"
                     :draggable="false"
+                    @click="center=m.position"
             ></gmap-marker>
+
         </gmap-map>
     </div>
 </template>
 
 <script>
     export default{
-        props: ['lat', 'long'],
+        props: ['lat', 'long', 'secondLat', 'secondLong'],
         data(){
             return {
-                position: {},
+                markers: [],
+                center: {},
                 mapStyle: [{
                     "stylers": [
                         {"saturation": -100}
@@ -31,7 +36,11 @@
             }
         },
         created: function () {
-            this.position = {lat: parseFloat(this.lat), lng: parseFloat(this.long)};
+            this.center = {lat: parseFloat(this.lat), lng: parseFloat(this.long)};
+            this.markers.push({position: {lat: parseFloat(this.lat), lng: parseFloat(this.long)}});
+            this.markers.push({position: {lat: parseFloat(this.secondLat), lng: parseFloat(this.secondLong)}});
+
+            console.log(this.secondLong)
         },
 
     }

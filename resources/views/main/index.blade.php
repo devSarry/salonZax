@@ -18,6 +18,8 @@
 
     @include('main.sections.map')
 
+    @include('main.layout._footer')
+
 
 
 @stop

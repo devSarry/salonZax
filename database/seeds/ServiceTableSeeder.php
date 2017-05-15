@@ -12,13 +12,13 @@ class ServiceTableSeeder extends Seeder
      */
     public function run()
     {
-        $category = \App\ServiceCategory::create(['name' => 'Haircuts', 'approved' => 1]);
-        $services = ['Haircuts & Blowouts', 'Express Cut', 'Clipper Cut', 'Kids Cut'];
+        $category = \App\ServiceCategory::create(['name' => 'Miehet', 'approved' => 1]);
+        $services = ['Parran Siistiminen Langalla', 'Hiusten Kuviointi Terällä', 'Parranajo', 'Hiusten Leikkaus Alle 12v', 'Hiusten Leikkaus Opiskelijat', 'Hiusten Leikaus'];
         $eloService = $this->populateServices($services);
         $category->services()->saveMany($eloService);
 
-        $category = \App\ServiceCategory::create(['name' => 'Finishing Touches', 'approved' => 1]);
-        $services = ['Basic Blowout', 'Ironworks', 'Styling', 'Shampoo & Set'];
+        $category = \App\ServiceCategory::create(['name' => 'Naiset', 'approved' => 1]);
+        $services = ['Kulmakarvojen Siistiminen Langalla', 'Kasvojen Siistiminen Langalla', 'Kulmakarvojen ja Ripsien Värjäys', 'Hiusten Leikaus'];
         $eloService = $this->populateServices($services);
         $category->services()->saveMany($eloService);
 
@@ -57,10 +57,9 @@ class ServiceTableSeeder extends Seeder
         if (!(\App\ServiceSection::first())) {
             $section = \App\ServiceSection::create();
             $section->section()->create([
-                'title'  => 'Change Me',
-                'body'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aut delectus dolorum eius enim explicabo hic illum non quam quasi ratione saepe similique tenetur veniam vitae, voluptas! Omnis?',
+                'title'  => 'Hinnasto',
+                'body'   => 'Tarjoamme hiustenleikkuja sekä miehille että naisille.',
                 'color'  => 'style3'
-
             ]);
         }
     }

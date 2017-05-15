@@ -56,14 +56,7 @@ class StaffController extends Controller {
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name'     => 'required',
-            'title'    => 'required',
-            'email'    => 'required|email',
-            'birthday' => 'required|date',
-            'body'     => 'required',
 
-        ]);
 
         $image = $request->get('image');
 
@@ -91,11 +84,6 @@ class StaffController extends Controller {
                 ->withErrors($validator)
                 ->withInput();
         }
-
-
-        //$staff->image()->create($uploadedFileInfo);
-
-
     }
 
     /**
@@ -148,7 +136,7 @@ class StaffController extends Controller {
             }
             $staff->image()->update($uploadedFileInfo);
         }
-        if ($request->has('name'))
+        if ($request->except('image'))
         {
             $staff->update($request->except('image'));
             alert()->success('Successfully Updated Staff');
@@ -181,5 +169,7 @@ class StaffController extends Controller {
         }
 
         $staff->delete();
+
+        return redirect()->back()->with('message', 'Post deleted!');
     }
 }

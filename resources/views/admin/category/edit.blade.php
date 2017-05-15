@@ -24,7 +24,7 @@
 
                         {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
                     </div>
-                    <div  class="form-group col-md-offset-2 col-md-2 raw-margin-top-24" >
+                    <div  class="form-group col-md-offset-1 col-md-3 raw-margin-top-24" >
                         <input type="checkbox"
                                name="approved"
                                id="fancy-checkbox-default"
