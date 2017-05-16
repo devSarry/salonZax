@@ -27,7 +27,7 @@ Nyt 2 liikettä
 Brahenkatu 10 Ja Uudenmaankat 4',
 
             ]);
-            
+
         }
     }
 }
