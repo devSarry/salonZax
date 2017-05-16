@@ -34,3 +34,33 @@
   font-size: 1.5em;
   -webkit-text-stroke: 0.01em #d13030;
 }
+
+@media only screen and (max-width: 500px) {
+  #banner h2 {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+    display: inline-block;
+    font-size: 3.75em;
+    letter-spacing: 0;
+    opacity: 1;
+    padding: 0em .8em;
+    margin-bottom: .5em;
+    position: relative;
+    z-index: 1;
+  }
+  .special-character {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: inherit;
+    position: relative;
+    margin-left: -20px;
+    margin-right: -25px;
+    font-size: 1.5em;
+    -webkit-text-stroke: 0.01em #d13030;
+  }
+}
