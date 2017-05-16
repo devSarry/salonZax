@@ -24,30 +24,11 @@
                     </div>
                     <div class="6u 12u(mobile)">
                         <ul class="icons">
-                            @if($contact->first()->facebook_url)
-                            <li>
-                                <a href="{!! $contact->first()->facebook_url !!}">
-                                    <span class="icon fa-facebook"></span>
-                                    {{$contact->facebook_label ?? ''}}
-                                </a>
-                            </li>
-                            @endif
-                            @if($contact->first()->twitter_url)
-                                <li>
-                                    <a href="{{$contact->first()->twitter_url}}">
-                                        <span class="icon fa-twitter"></span>
-                                        {{$contact->twitter_label ?? ''}}
-                                    </a>
-                                </li>
-                            @endif
-                            @if($contact->first()->instagram_url)
-                                <li>
-                                    <a href="{{$contact->first()->instagram_url}}">
-                                        <span class="icon fa-instagram"></span>
-                                        {{$contact->first()->instagram_label ?? ''}}
-                                    </a>
-                                </li>
-                            @endif
+                            <li class="icon fa-home">
+                                @foreach( explode('>,', $contact[1]->wrapped_address) as $address)
+                                    {!! $address !!} <br>
+                                @endforeach
+
                         </ul>
                     </div>
                 </div>

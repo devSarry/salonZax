@@ -17,7 +17,7 @@
                     <input type="text" class="form-control" name="service" id="service"
                            value="{{ $service->service  }}">
                 </div>
-                <div class="form-group col-md-offset-2 col-md-3">
+                <div class="form-group col-md-offset-1 col-md-3">
                     <label for="price">Price</label>
                     <input type="text" class="form-control" name="price" id="price" value="{{ $service->price }}">
                 </div>
