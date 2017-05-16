@@ -27,15 +27,7 @@ Nyt 2 liikettä
 Brahenkatu 10 Ja Uudenmaankat 4',
 
             ]);
-
-            $section->image()->create([
-                'image' => 'banner.jpg',
-                'upload_dir' => 'seededBanner/',
-                'original_image_name' => 'banner.jpg',
-                'size' => 500,
-                'extension' => 'jpg',
-                'mime_type' => 'jpg'
-            ]);
+            
         }
     }
 }
