@@ -6,7 +6,7 @@
     <div class="row">
         <div class="6u 12u$(small)">
             <section>
-                <p>{{ $contact->first()->section->body }}</p>
+                <p>{!!  nl2br(($contact->first()->section->body)) !!}</p>
                 <div class="row">
                     <div class="6u 12u(mobile)">
                         <ul class="icons">
