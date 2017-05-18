@@ -30,7 +30,7 @@ class ServiceSettingsController extends Controller
     {
         $data = ServiceSection::findOrFail(1);
         $pageData = [
-            'section'   => 'Service',
+            'section'   => 'Hinnasto',
             'route'     => 'services.setting.update'
             
         ];

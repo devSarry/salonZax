@@ -53,7 +53,7 @@ class HomeController extends Controller
             3. Mail message
         */
 
-        alert()->success('Thanks ' . $message->name . ' your message was recieved and we\'ll get back to you soon');
+        alert()->success('Kiitos ' . $message->name . ' viestistäsi. Vastaamme sinulle niin pian kuin voimme')->persistent("OK");
 
         return redirect()->back();
 

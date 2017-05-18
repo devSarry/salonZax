@@ -5,13 +5,13 @@
 
     <div class="container">
         <div class="row">
-            <h1>{{ $pageData['section'] }} Page: Edit</h1>
+            <h1>{{ $pageData['section'] }} Osa: Muokkaa</h1>
             <form action="{!! route( $pageData['route']) !!}" method="post" role="form" >
                 {{ method_field('PATCH') }}
                 {{ csrf_field() }}
 
                 <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                    <label for="title">Title</label>
+                    <label for="title">Otsikko(Title)</label>
                     <input type="text"
                            class="form-control"
                            name="title"
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="form-group {{ $errors->has('body') ? 'has-error' : '' }}">
-                    <label for="body">Body</label>
+                    <label for="body">Texti(Body)</label>
                     <textarea class="form-control"
                               name="body"
                               id="body"
@@ -39,7 +39,7 @@
 
                 <div class="well well-sm">
 
-                    <h3>Background Color</h3>
+                    <h3>Taustaväri</h3>
 
 
                         <div class="btn-group" data-toggle="buttons">
@@ -70,7 +70,7 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Tallena</button>
                 </div>
 
             </form>

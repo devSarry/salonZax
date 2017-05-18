@@ -1,13 +1,13 @@
 @extends('admin.layout.app')
 
 @section('content')
-    <h1 class="page-header">Dashboard</h1>
+    <h1 class="page-header">Palauteviestit</h1>
     <hr>
     <div class="container"  v-pre>
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Message</div>
+                    <div class="panel-heading">Viestit</div>
                     <div class="panel-body">
 
                         <br/>
@@ -16,7 +16,7 @@
                             <table class="table table-borderless">
                                 <thead>
                                 <tr>
-                                    <th>ID</th><th> Name </th><th> Email </th><th> Message </th><th>Actions</th>
+                                    <th>ID</th><th> Nimi </th><th> Email </th><th> Viesti </th><th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>

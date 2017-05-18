@@ -12,13 +12,13 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge">{{ $messagesCount }}</div>
-                        <div>New Comments!</div>
+                        <div>Uusi Viesti!</div>
                     </div>
                 </div>
             </div>
             <a href="{{ url('contact/messages') }}">
                 <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
+                    <span class="pull-left">Lisää tiedot</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>
@@ -35,13 +35,13 @@
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge">{{ ($analyticsData) }}</div>
-                        <div>Visitors Today</div>
+                        <div>Vierailijat tänään</div>
                     </div>
                 </div>
             </div>
             <a href="{{ env('GOOGLE_ANALYTICS_DASHBOARD') }}">
                 <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
+                    <span class="pull-left">Lisää tiedot</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>

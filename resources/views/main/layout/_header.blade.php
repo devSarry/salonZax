@@ -1,4 +1,4 @@
 <!-- Header -->
 <header id="header" class="alt">
-    <h1><a href="{{ url('/') }}">Salon Demo</a></h1>
+    <h1><a href="{{ url('/') }}"> Zaxo Parturi Kampaamo</a></h1>
 </header>

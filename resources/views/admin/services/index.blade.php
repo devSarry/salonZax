@@ -4,10 +4,8 @@
 
         <div class="row">
             <a class="btn btn-success pull-right  raw-margin-top-24"
-               href="{!! route('category.create') !!}">Add New Category</a>
-            <h1>This is the services page.</h1>
-
-            <p>Here we list all the services provided.</p>
+               href="{!! route('category.create') !!}">Lisä uusi kategoria</a>
+            <h1>Palvelut ja hinnasto.</h1>
 
         </div>
 
@@ -35,7 +33,7 @@
                                         <span>
                                             <a href="{{ route('category.edit', ['id' => $category->id]) }}"
                                                class="btn btn-info btn-block">
-                                                <i class="fa fa-pencil"></i> Edit
+                                                <i class="fa fa-pencil"></i> Muokkaa
                                             </a>
                                         </span>
                                     </li>
@@ -49,7 +47,7 @@
                                                 <button type="submit" class="btn btn-default btn-block">
                                                     <span class="fa {{ $category->approved ? 'fa-check-square-o' : 'fa-square-o' }}">
                                                     </span>
-                                                    Show?
+                                                    Näytä?
                                                 </button>
                                             </div>
                                         </form>
@@ -64,26 +62,26 @@
                                             <button class="btn btn-danger btn-block"
                                                     type="submit"
                                                     onclick="return confirm('Are you sure you want to delete this workout?')">
-                                                    <i class="fa fa-trash"></i> Delete
+                                                    <i class="fa fa-trash"></i> Poista
                                             </button>
                                         </li>
                                     </form>
                                 </ul>
                         </span>
                             <a class="btn btn-primary pull-right raw-margin-top-24 raw-margin-right-8"
-                               href="{!! route('services.create', ['category_id' => $category->id]) !!}">Add New Service</a>
+                               href="{!! route('services.create', ['category_id' => $category->id]) !!}">Lisä uusi palvelu</a>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-12">
                             @if ($category->services->isEmpty())
-                                <div class="well text-center">No services found.</div>
+                                <div class="well text-center">Ei palveluita.</div>
                             @else
                                 <table class="table table-striped">
                                     <thead>
-                                    <th>Service</th>
-                                    <th>Price</th>
+                                    <th>Palvelu</th>
+                                    <th>Hinta</th>
                                     <th class="text-right" width="200px">Action</th>
                                     </thead>
                                     <tbody>
@@ -103,12 +101,12 @@
                                                     <button class="btn btn-danger btn-xs pull-right" type="submit"
                                                             onclick="return confirm('Are you sure you want to delete this workout?')">
                                                         <i
-                                                                class="fa fa-trash"></i> Delete
+                                                                class="fa fa-trash"></i> Poista
                                                     </button>
                                                 </form>
                                                 <a class="btn btn-default btn-xs pull-right raw-margin-right-10"
                                                    href="{!! route('services.edit', [$service->id]) !!}"><i
-                                                            class="fa fa-pencil"></i> Edit
+                                                            class="fa fa-pencil"></i> Muokkaa
                                                 </a>
                                             </td>
                                         </tr>

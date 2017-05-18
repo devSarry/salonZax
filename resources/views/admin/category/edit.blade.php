@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-sm-9 col-md-10 main">
         <div class="row">
-            <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">Service Category: Edit</h1>
+            <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">Hinnasto Ryhmä: Luo (Edit)</h1>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -13,7 +13,7 @@
                     {{ method_field('PATCH') }}
 
                     <div class="form-group col-md-8 {{ $errors->has('name') ? 'has-error' : '' }}">
-                        <label for="name">Category Name</label>
+                        <label for="name">Hinnasto Ryhmä Nimi:</label>
                         <input type="text"
                                class="form-control"
                                name="name"
@@ -36,13 +36,13 @@
                                 <span> </span>
                             </label>
                             <label for="fancy-checkbox-default" class="btn btn-default active">
-                                Show?
+                                Näytä?
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group  col-md-8">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary">Tallena</button>
                     </div>
 
                 </form>

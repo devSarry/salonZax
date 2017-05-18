@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-sm-9 col-md-10 main">
         <div class="row">
-            <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">Services: Create</h1>
+            <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">Palvelu: Luo</h1>
         </div>
 
         <div class="row">
@@ -13,7 +13,7 @@
                     {{ csrf_field() }}
 
                     <div class="form-group col-md-8 {{ $errors->has('service') ? 'has-error' : '' }}">
-                        <label for="service">Service</label>
+                        <label for="service">Palvelu</label>
                         <input type="text"
                                class="form-control"
                                name="service"
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="form-group col-md-offset-2 col-md-2">
-                        <label for="price">Price</label>
+                        <label for="price">Hinta</label>
                         <div class="input-group {{ $errors->has('service') ? 'has-error' : '' }}">
                             <span class="input-group-addon">‎€</span>
                             <input type="text"
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="form-group  col-md-8">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary">Tallena</button>
                     </div>
 
                 </form>

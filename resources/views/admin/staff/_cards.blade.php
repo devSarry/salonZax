@@ -25,7 +25,7 @@
                                         <span>
                                             <a href="{{ route('staff.edit', ['id' => $member->id]) }}"
                                                class="btn btn-info btn-block">
-                                                <i class="fa fa-pencil"></i> Edit
+                                                <i class="fa fa-pencil"></i> muokkaa
                                             </a>
                                         </span>
                                     </li>
@@ -39,7 +39,7 @@
                                                 <button type="submit" class="btn btn-default btn-block">
                                                     <span class="fa {{  $member->active ? 'fa-check-square-o' : 'fa-square-o' }}">
                                                     </span>
-                                                    Show?
+                                                    Näytää?
                                                 </button>
                                             </div>
                                         </form>
@@ -53,20 +53,20 @@
                                                     <button class="btn btn-danger btn-block"
                                                             type="submit"
                                                             onclick="return confirm('Are you sure you want to delete this post?')">
-                                                            <i class="fa fa-trash"></i> Delete
+                                                            <i class="fa fa-trash"></i> Poista
                                                     </button>
                                                 </li>
                                             </form>
                                         </ul>
                                     </span>
-                            <h4>{{ $member->name?? $member->title}}</h4>
-                            <p>
+                            <h4>{{ $member->name ?? $member->title ?? 'Ei Otsiko Texti'}}</h4>
+{{--                            <p>
                                 <i class="fa fa-envelope"></i> {{ $member->email ?? 'No Email'}}
                                 <br/>
                                 <i class="fa fa-gift"></i> {{ $member->birthday ?? 'No Birthday' }}
-                            </p>
+                            </p>--}}
                             <p>
-                                {{ $member->body }}
+                                {{ $member->body ? $member->body : 'Ei Kuvaus Texti' }}
                             </p>
                         </div>
                     </div>

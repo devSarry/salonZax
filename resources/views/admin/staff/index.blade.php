@@ -5,10 +5,8 @@
     <div class="container">
         <div class="row">
             <a class="btn btn-success pull-right  raw-margin-top-24"
-               href="{!! route('staff.create') !!}">Add New Staff Member</a>
-            <h1>This is the staff page.</h1>
-
-            <p>Here we list all the staff members.</p>
+               href="{!! route('staff.create') !!}">Lisä uusi kuva</a>
+            <h1>Kuvagalleria</h1>
 
         </div>
 
@@ -20,7 +18,7 @@
 
                     <div class="well well-sm text-center">
                         <h3>
-                            No staff members.
+                            Ei ole vielä kuvia
                         </h3>
                     </div>
                 @else

@@ -17,7 +17,7 @@
 
 
     <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">Sähköposti</label>
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
             <input type="text"
@@ -32,14 +32,14 @@
     </div>
 
     <div class="form-group">
-        <label for="email">Phone Number</label>
+        <label for="email">Puhelinnumero</label>
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
             <input type="text"
                    class="form-control"
                    name="phone_number"
                    id="phone_number"
-                   placeholder="Phone Number (required)"
+                   placeholder="Puhelinnumero (required)"
                    value="{{ old('phone_number') ?? $data->phone_number }}"
             >
         </div>

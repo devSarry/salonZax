@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-sm-9 col-md-10 main">
         <div class="row">
-            <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">Staff: Create</h1>
+            <h1 class="pull-left raw-margin-top-24 raw-margin-left-24">Kuva: Luoda</h1>
         </div>
 
         <div class="row">
@@ -15,7 +15,7 @@
                     @include('admin.staff._form')
 
                     <div class="form-group  col-md-8">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary">Tallena</button>
                     </div>
 
                 </form>

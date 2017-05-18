@@ -2,7 +2,7 @@
     <div>
 
         <div class="form-group">
-            <label for="address">Address</label>
+            <label for="address">Osoite</label>
             <gmap-autocomplete
                     :value="dbLocation"
                     class="form-control"

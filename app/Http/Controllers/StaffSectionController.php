@@ -26,7 +26,7 @@ class StaffSectionController extends Controller
     {
         $data = StaffSection::findOrFail(1);
         $pageData = [
-            'section'   => 'Staff',
+            'section'   => 'Kuvagalleria',
             'route'     => 'staff.setting.update'
 
         ];
