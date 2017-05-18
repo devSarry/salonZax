@@ -65,6 +65,8 @@ class StaffController extends Controller {
             //image is uploaded, get uploaded image info
             $uploadedFileInfo = $this->image->getUploadedFileInfo();
 
+            $uploadedFileInfo['original_image_name'] = $uploadedFileInfo['original_image_name'] ?? 'picture';
+
             //do whatever you like with the information
             $staff = Staff::create($request->except('image'));
 
