@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\StaffSection;
+use App\Models\StaffSection;
 use Illuminate\Http\Request;
 
 class StaffSectionController extends Controller

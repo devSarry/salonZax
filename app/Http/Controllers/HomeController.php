@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\ContactSection;
-use App\MainSection;
-use App\Message;
-use App\ServiceCategory;
-use App\ServiceSection;
-use App\Staff;
-use App\StaffSection;
+use App\Models\ContactSection;
+use App\Models\MainSection;
+use App\Models\Message;
+use App\Models\ServiceCategory;
+use App\Models\ServiceSection;
+use App\Models\Staff;
+use App\Models\StaffSection;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -32,7 +32,7 @@ class HomeController extends Controller
         $staff = Staff::with('image')->get();
 
         $chunks = $categories->split(2);
-
+        
         return view('main.index', compact('categories', 'chunks', 'service_section', 'staff' , 'staff_section', 'main_section', 'contact'));
     }
 

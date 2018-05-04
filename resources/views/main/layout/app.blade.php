@@ -24,7 +24,8 @@
 <div id="app">
     <!-- Page Wrapper -->
     <div id="page-wrapper"
-         style="background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{!! url(($main_section->image->upload_dir) . ($main_section->image->image)) ?? ''!!}')">
+         style="background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                 url('{!! $main_section->image->upload_dir . $main_section->image->image ?? ''!!}')">
 
         @include('main.layout._header')
 

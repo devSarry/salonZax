@@ -2,7 +2,7 @@
     <ul class="icons">
         <ul class="icons">
 
-            @foreach(App\ContactSection::first()->socialMedia as $socialMedia)
+            @foreach(App\Models\ContactSection::first()->socialMedia as $socialMedia)
                 <li>
                     <a href="http://{!! $socialMedia['link'] !!}" class="icon fa-{{ $socialMedia['name'] }}">
                         <span class="label">{{ $socialMedia['name'] }}</span>

@@ -6,7 +6,7 @@
  * Time: 2:33 PM
  */
 
-namespace App;
+namespace App\Models;
 
 
 trait Imagable {

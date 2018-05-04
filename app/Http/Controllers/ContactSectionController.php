@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\ContactSection;
-use App\StaffSection;
+use App\Models\ContactSection;
+use App\Models\StaffSection;
 use Illuminate\Http\Request;
 
 class ContactSectionController extends Controller

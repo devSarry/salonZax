@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Service;
-use App\ServiceCategory;
+use App\Models\Service;
+use App\Models\ServiceCategory;
 use Debugbar;
 use Illuminate\Http\Request;
 

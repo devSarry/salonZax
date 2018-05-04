@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,6 +14,7 @@ class ContactSection extends Model
 
     public function getSocialMediaAttribute()
     {
+        /* TODO make social media table */
         $socialMedia = ['facebook', 'twitter', 'instagram'];
 
         $data = [];

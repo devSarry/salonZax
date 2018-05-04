@@ -6,7 +6,7 @@
  * Time: 12:00 PM
  */
 
-namespace App;
+namespace App\Models;
 
 
 trait Sectionable {

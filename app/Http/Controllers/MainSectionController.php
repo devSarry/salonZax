@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use AnkitPokhrel\LaravelImage\ImageUploadService;
-use App\MainSection;
+use App\Models\MainSection;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\ServiceSection;
+use App\Models\ServiceSection;
 use Illuminate\Http\Request;
 use Session;
 

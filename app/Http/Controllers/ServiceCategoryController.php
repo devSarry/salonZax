@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Debugbar;
-use App\ServiceCategory;
+use App\Models\ServiceCategory;
 
 use Illuminate\Http\Request;
 
